@@ -14,6 +14,7 @@ namespace TriBibliv2.view
 {
     public partial class FrmMainWindow : Form
     {
+
         /// <summary>
         /// Objet pour gérer la liste des personnels
         /// </summary>
@@ -62,7 +63,7 @@ namespace TriBibliv2.view
         }
 
         /// <summary>
-        /// Affiche la liste des personnels
+        /// Affiche la liste des livres
         /// </summary>
         private void RemplirListeLivres()
         {
@@ -73,8 +74,11 @@ namespace TriBibliv2.view
 
         private void BtnAdd_Click(object sender, EventArgs e)
         {
-            Form addBookForm = new FrmAddBook();
-            addBookForm.ShowDialog();
+            Form addBookForm = new FrmAddBook(lesLivres, nomFic);
+            if (addBookForm.ShowDialog() == DialogResult.OK)
+            {
+                RemplirListeLivres();
+            }
         }
     }
 }

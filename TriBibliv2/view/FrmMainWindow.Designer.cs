@@ -48,9 +48,11 @@
             // 
             // GridVBookList
             // 
+            GridVBookList.BackgroundColor = SystemColors.ControlLightLight;
             GridVBookList.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             GridVBookList.Location = new Point(12, 12);
             GridVBookList.Name = "GridVBookList";
+            GridVBookList.RowHeadersVisible = false;
             GridVBookList.Size = new Size(751, 594);
             GridVBookList.TabIndex = 0;
             // 

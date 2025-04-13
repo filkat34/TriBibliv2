@@ -154,6 +154,7 @@
             BtnSave.TabIndex = 12;
             BtnSave.Text = "Enregistrer";
             BtnSave.UseVisualStyleBackColor = true;
+            BtnSave.Click += BtnSave_Click;
             // 
             // FrmAddBook
             // 

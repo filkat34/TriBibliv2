@@ -12,7 +12,7 @@ using static TriBibliv2.view.FrmMainWindow;
 namespace TriBibliv2.controller
 {
     internal class FrmMainWindowController
-    {
+    { 
         /// <summary>
         /// Objet pour gérer la liste des livres
         /// </summary>
@@ -24,14 +24,21 @@ namespace TriBibliv2.controller
         /// <returns>liste des livres</returns>
         public List<Book> GetLesLivres(string nomFichier)
         {
+            string nomFic = nomFichier;
             // récupérer la sauvegarde des livres, si elle existe
-            Object recupLivres = Serialise.Recup(nomFichier);
+            Object recupLivres = Serialise.Recup(nomFic);
             if (recupLivres != null)
             {
                 listLivres = (List<Book>)recupLivres;
             }
             return listLivres;
         }
+
+        public void SaveBook(List<Book> listeaenregistrer, string nomfichier)
+        {
+            // sauvegarde de la liste des livres
+            Serialise.Sauve(nomfichier, listeaenregistrer);
+        }   
     }
 
 }
