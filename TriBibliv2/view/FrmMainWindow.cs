@@ -73,7 +73,23 @@ namespace TriBibliv2.view
             if (addBookForm.ShowDialog() == DialogResult.OK)
             {
                 RemplirListeLivres();
-
+            }
+        }
+        /// <summary>
+        /// Supprime le livre sélectionné
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void BtnDelete_Click(object sender, EventArgs e)
+        {
+            if (GridVBookList.SelectedRows.Count > 0)
+            {
+                Book livre = (Book)bdgLivres.List[bdgLivres.Position];
+                if (MessageBox.Show("Voulez-vous vraiment supprimer " + livre.Titre.ToUpper() + " ?", "Confirmation de suppression", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    controller.DelBook(livre);
+                    RemplirListeLivres();
+                }
             }
         }
     }

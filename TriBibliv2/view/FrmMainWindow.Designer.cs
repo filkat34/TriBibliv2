@@ -58,18 +58,19 @@
             GridVBookList.AllowUserToResizeRows = false;
             GridVBookList.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             GridVBookList.BackgroundColor = SystemColors.ControlLightLight;
-            GridVBookList.BorderStyle = BorderStyle.None;
             GridVBookList.CellBorderStyle = DataGridViewCellBorderStyle.None;
+            GridVBookList.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = SystemColors.Control;
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 12F);
+            dataGridViewCellStyle1.BackColor = SystemColors.ButtonFace;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Control;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.ButtonFace;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.ActiveCaptionText;
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             GridVBookList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             GridVBookList.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             GridVBookList.Cursor = Cursors.Hand;
+            GridVBookList.EnableHeadersVisualStyles = false;
             GridVBookList.Location = new Point(12, 12);
             GridVBookList.MultiSelect = false;
             GridVBookList.Name = "GridVBookList";
@@ -79,7 +80,7 @@
             dataGridViewCellStyle2.BackColor = SystemColors.Control;
             dataGridViewCellStyle2.Font = new Font("Segoe UI", 12F);
             dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Control;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.ButtonShadow;
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.ControlText;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
             GridVBookList.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
@@ -215,6 +216,7 @@
             BtnDelete.TabIndex = 5;
             BtnDelete.Text = "Supprimer";
             BtnDelete.UseVisualStyleBackColor = true;
+            BtnDelete.Click += BtnDelete_Click;
             // 
             // BtnStats
             // 

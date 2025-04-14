@@ -181,7 +181,7 @@
             Name = "FrmAddWindow";
             SizeGripStyle = SizeGripStyle.Hide;
             StartPosition = FormStartPosition.CenterParent;
-            Text = "AddWindow";
+            Text = "Ajouter un livre";
             TopMost = true;
             ResumeLayout(false);
             PerformLayout();

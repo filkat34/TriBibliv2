@@ -36,7 +36,6 @@ namespace TriBibliv2.controller
             nomFic = Path.Combine(dossierSauvegarde, "sauvLivres.json");
         }
 
-
         /// <summary>
         /// Récupère et retourne les infos sur les livres
         /// </summary>
@@ -49,7 +48,17 @@ namespace TriBibliv2.controller
                 listLivres = recupLivres;
             }
             return listLivres;
-        } 
-    }
+        }
 
+        /// <summary>
+        /// Supprime le livre de la liste
+        /// Sauvegardera la liste dans le fichier JSON
+        /// </summary>
+        /// <param name="book"></param>
+        public void DelBook(Book book)
+        {
+            listLivres.Remove(book);
+            Serialise.Sauve(nomFic, listLivres);
+        }
+    }
 }
