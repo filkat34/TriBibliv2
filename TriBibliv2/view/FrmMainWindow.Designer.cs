@@ -29,8 +29,11 @@
         private void InitializeComponent()
         {
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             GridVBookList = new DataGridView();
             groupBox1 = new GroupBox();
+            label3 = new Label();
+            CBoxFilterNote = new ComboBox();
             label2 = new Label();
             label1 = new Label();
             CBoxFilterStatut = new ComboBox();
@@ -52,7 +55,8 @@
             GridVBookList.AllowUserToAddRows = false;
             GridVBookList.AllowUserToDeleteRows = false;
             GridVBookList.AllowUserToOrderColumns = true;
-            GridVBookList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            GridVBookList.AllowUserToResizeRows = false;
+            GridVBookList.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             GridVBookList.BackgroundColor = SystemColors.ControlLightLight;
             GridVBookList.BorderStyle = BorderStyle.None;
             GridVBookList.CellBorderStyle = DataGridViewCellBorderStyle.None;
@@ -71,6 +75,14 @@
             GridVBookList.Name = "GridVBookList";
             GridVBookList.ReadOnly = true;
             GridVBookList.RightToLeft = RightToLeft.No;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.Control;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 12F);
+            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Control;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            GridVBookList.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             GridVBookList.RowHeadersVisible = false;
             GridVBookList.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             GridVBookList.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
@@ -79,6 +91,8 @@
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(label3);
+            groupBox1.Controls.Add(CBoxFilterNote);
             groupBox1.Controls.Add(label2);
             groupBox1.Controls.Add(label1);
             groupBox1.Controls.Add(CBoxFilterStatut);
@@ -90,10 +104,29 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Filtres rapides";
             // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(247, 25);
+            label3.Name = "label3";
+            label3.Size = new Size(51, 21);
+            label3.TabIndex = 5;
+            label3.Text = "Note :";
+            // 
+            // CBoxFilterNote
+            // 
+            CBoxFilterNote.DropDownStyle = ComboBoxStyle.DropDownList;
+            CBoxFilterNote.FormattingEnabled = true;
+            CBoxFilterNote.Items.AddRange(new object[] { " ", "*", "**", "***", "****" });
+            CBoxFilterNote.Location = new Point(247, 56);
+            CBoxFilterNote.Name = "CBoxFilterNote";
+            CBoxFilterNote.Size = new Size(166, 29);
+            CBoxFilterNote.TabIndex = 4;
+            // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(315, 25);
+            label2.Location = new Point(434, 25);
             label2.Name = "label2";
             label2.Size = new Size(57, 21);
             label2.TabIndex = 3;
@@ -113,19 +146,19 @@
             CBoxFilterStatut.DropDownStyle = ComboBoxStyle.DropDownList;
             CBoxFilterStatut.FormattingEnabled = true;
             CBoxFilterStatut.Items.AddRange(new object[] { " ", "Conserver", "Donner", "Recycler", "Vendre" });
-            CBoxFilterStatut.Location = new Point(315, 56);
+            CBoxFilterStatut.Location = new Point(434, 56);
             CBoxFilterStatut.Name = "CBoxFilterStatut";
-            CBoxFilterStatut.Size = new Size(290, 29);
+            CBoxFilterStatut.Size = new Size(166, 29);
             CBoxFilterStatut.TabIndex = 1;
             // 
             // CBoxFilterGenre
             // 
             CBoxFilterGenre.DropDownStyle = ComboBoxStyle.DropDownList;
             CBoxFilterGenre.FormattingEnabled = true;
-            CBoxFilterGenre.Items.AddRange(new object[] { " ", "Arts et loisirs", "Autres", "BD", "Cuisine", "Essai", "Manuels", "Poésie", "Récits", "Théâtre" });
+            CBoxFilterGenre.Items.AddRange(new object[] { " ", "Arts et loisirs", "BD", "Cuisine", "Essai", "Manuel", "Poésie", "Récit", "Théâtre", "Autre" });
             CBoxFilterGenre.Location = new Point(6, 56);
             CBoxFilterGenre.Name = "CBoxFilterGenre";
-            CBoxFilterGenre.Size = new Size(290, 29);
+            CBoxFilterGenre.Size = new Size(221, 29);
             CBoxFilterGenre.TabIndex = 0;
             // 
             // groupBox2
@@ -234,5 +267,7 @@
         private ComboBox CBoxFilterStatut;
         private ComboBox CBoxFilterGenre;
         private Button BtnStats;
+        private Label label3;
+        private ComboBox CBoxFilterNote;
     }
 }

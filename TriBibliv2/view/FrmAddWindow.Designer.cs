@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             BtnSave = new Button();
-            richtxtBoxNotes = new RichTextBox();
             CBoxStatut = new ComboBox();
             CBoxGenre = new ComboBox();
             txtBoxTitle = new TextBox();
@@ -41,24 +40,17 @@
             label3 = new Label();
             label2 = new Label();
             label1 = new Label();
+            CBoxNote = new ComboBox();
             SuspendLayout();
             // 
             // BtnSave
             // 
-            BtnSave.Location = new Point(178, 484);
+            BtnSave.Location = new Point(198, 289);
             BtnSave.Name = "BtnSave";
             BtnSave.Size = new Size(130, 37);
             BtnSave.TabIndex = 25;
             BtnSave.Text = "Enregistrer";
             BtnSave.UseVisualStyleBackColor = true;
-            // 
-            // richtxtBoxNotes
-            // 
-            richtxtBoxNotes.Location = new Point(19, 278);
-            richtxtBoxNotes.Name = "richtxtBoxNotes";
-            richtxtBoxNotes.Size = new Size(460, 191);
-            richtxtBoxNotes.TabIndex = 24;
-            richtxtBoxNotes.Text = "";
             // 
             // CBoxStatut
             // 
@@ -74,7 +66,7 @@
             // 
             CBoxGenre.DropDownStyle = ComboBoxStyle.DropDownList;
             CBoxGenre.FormattingEnabled = true;
-            CBoxGenre.Items.AddRange(new object[] { "Arts et loisirs", "BD", "Cuisine", "Essai", "Manuel", "Poésie", "Récit", "Théâtre", "Autres" });
+            CBoxGenre.Items.AddRange(new object[] { "Arts et loisirs", "BD", "Cuisine", "Essai", "Manuel", "Poésie", "Récit", "Théâtre", "Autre" });
             CBoxGenre.Location = new Point(107, 151);
             CBoxGenre.Name = "CBoxGenre";
             CBoxGenre.Size = new Size(271, 29);
@@ -104,11 +96,11 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(19, 242);
+            label6.Location = new Point(34, 242);
             label6.Name = "label6";
-            label6.Size = new Size(51, 21);
+            label6.Size = new Size(44, 21);
             label6.TabIndex = 18;
-            label6.Text = "Notes";
+            label6.Text = "Note";
             // 
             // label5
             // 
@@ -155,13 +147,23 @@
             label1.TabIndex = 13;
             label1.Text = "Nom";
             // 
+            // CBoxNote
+            // 
+            CBoxNote.DropDownStyle = ComboBoxStyle.DropDownList;
+            CBoxNote.FormattingEnabled = true;
+            CBoxNote.Items.AddRange(new object[] { "*", "**", "***", "****" });
+            CBoxNote.Location = new Point(107, 234);
+            CBoxNote.Name = "CBoxNote";
+            CBoxNote.Size = new Size(168, 29);
+            CBoxNote.TabIndex = 26;
+            // 
             // FrmAddWindow
             // 
             AutoScaleDimensions = new SizeF(9F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(501, 540);
+            ClientSize = new Size(498, 348);
+            Controls.Add(CBoxNote);
             Controls.Add(BtnSave);
-            Controls.Add(richtxtBoxNotes);
             Controls.Add(CBoxStatut);
             Controls.Add(CBoxGenre);
             Controls.Add(txtBoxTitle);
@@ -175,7 +177,7 @@
             Controls.Add(label1);
             MaximizeBox = false;
             MaximumSize = new Size(517, 580);
-            MinimumSize = new Size(517, 580);
+            MinimumSize = new Size(514, 388);
             Name = "FrmAddWindow";
             SizeGripStyle = SizeGripStyle.Hide;
             StartPosition = FormStartPosition.CenterParent;
@@ -188,7 +190,6 @@
         #endregion
 
         private Button BtnSave;
-        private RichTextBox richtxtBoxNotes;
         private ComboBox CBoxStatut;
         private ComboBox CBoxGenre;
         private TextBox txtBoxTitle;
@@ -200,5 +201,6 @@
         private Label label3;
         private Label label2;
         private Label label1;
+        private ComboBox CBoxNote;
     }
 }

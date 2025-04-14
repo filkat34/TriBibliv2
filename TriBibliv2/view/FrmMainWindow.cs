@@ -58,7 +58,7 @@ namespace TriBibliv2.view
             listLivres = controller.GetBooks();
             bdgLivres.DataSource = listLivres;
             GridVBookList.DataSource = bdgLivres;
-            GridVBookList.Columns["Note"].Visible = false;
+            GridVBookList.Columns[1].HeaderText = "Auteur";
             GridVBookList.Columns["PrenomAuteur"].Visible = false;
         }
 
