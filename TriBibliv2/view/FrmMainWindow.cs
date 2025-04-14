@@ -14,6 +14,10 @@ namespace TriBibliv2.view
 {
     public partial class FrmMainWindow : Form
     {
+        /// <summary>
+        /// Objet pour gérer la liste des livres
+        /// </summary>
+        List<Book> listLivres = new List<Book>();
 
         /// <summary>
         /// Objet pour gérer la liste des personnels
@@ -24,17 +28,6 @@ namespace TriBibliv2.view
         /// Controleur de la fenêtre
         /// </summary>
         private FrmMainWindowController controller;
-
-        /// <summary>
-        /// Liste de sauvegarde des livres
-        /// </summary>
-        List<Book> lesLivres = new List<Book>();
-
-        // nom du fichier de sérialisation
-        string nomFic = "sauvLivres";
-
-        // dossier de sauvegarde
-        string dossierSauvegarde = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "TriBibli");
 
 
         /// <summary>
@@ -53,12 +46,7 @@ namespace TriBibliv2.view
         private void Init()
         {
             controller = new FrmMainWindowController();
-
-            // création du dossier de sauvegarde s'il n'existe pas
-            Directory.CreateDirectory(dossierSauvegarde);
-
-            // chemin d'accès au fichier de sauvegarde
-            nomFic = Path.Combine(dossierSauvegarde, "sauvLivres.json");
+            controller.CreateSaveFolder();
             RemplirListeLivres();
         }
 
@@ -67,17 +55,25 @@ namespace TriBibliv2.view
         /// </summary>
         private void RemplirListeLivres()
         {
-            lesLivres = controller.GetLesLivres(nomFic);
-            bdgLivres.DataSource = lesLivres;
+            listLivres = controller.GetBooks();
+            bdgLivres.DataSource = listLivres;
             GridVBookList.DataSource = bdgLivres;
+            GridVBookList.Columns["Note"].Visible = false;
+            GridVBookList.Columns["PrenomAuteur"].Visible = false;
         }
 
+        /// <summary>
+        /// Ouvre la fenêtre d'ajout d'un livre
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnAdd_Click(object sender, EventArgs e)
         {
-            Form addBookForm = new FrmAddBook(lesLivres, nomFic);
+            Form addBookForm = new FrmAddWindow();
             if (addBookForm.ShowDialog() == DialogResult.OK)
             {
                 RemplirListeLivres();
+
             }
         }
     }

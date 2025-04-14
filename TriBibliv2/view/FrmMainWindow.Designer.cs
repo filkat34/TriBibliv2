@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             GridVBookList = new DataGridView();
             groupBox1 = new GroupBox();
             label2 = new Label();
@@ -48,11 +49,31 @@
             // 
             // GridVBookList
             // 
+            GridVBookList.AllowUserToAddRows = false;
+            GridVBookList.AllowUserToDeleteRows = false;
+            GridVBookList.AllowUserToOrderColumns = true;
+            GridVBookList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             GridVBookList.BackgroundColor = SystemColors.ControlLightLight;
+            GridVBookList.BorderStyle = BorderStyle.None;
+            GridVBookList.CellBorderStyle = DataGridViewCellBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = SystemColors.Control;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 12F);
+            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Control;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            GridVBookList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             GridVBookList.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            GridVBookList.Cursor = Cursors.Hand;
             GridVBookList.Location = new Point(12, 12);
+            GridVBookList.MultiSelect = false;
             GridVBookList.Name = "GridVBookList";
+            GridVBookList.ReadOnly = true;
+            GridVBookList.RightToLeft = RightToLeft.No;
             GridVBookList.RowHeadersVisible = false;
+            GridVBookList.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            GridVBookList.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             GridVBookList.Size = new Size(751, 594);
             GridVBookList.TabIndex = 0;
             // 

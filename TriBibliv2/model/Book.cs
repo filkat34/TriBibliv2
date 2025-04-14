@@ -2,14 +2,16 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+using System.Text.Json;
 
 namespace TriBibliv2.model
 {
     /// <summary>
     /// Classe métier Livre
     /// </summary>
-    [SerializableAttribute]
     public class Book
     {
         /// <summary>
@@ -21,6 +23,21 @@ namespace TriBibliv2.model
         private string genre;// roman, essai, théâtre, poésie, BD, usuels, autres, etc.
         private string statut; //conserver, donner, vendre, recycler
         private string note; //notes sur le livre
+
+
+        /// <summary>
+        /// Constructeur vide utile pour la déserialization
+        /// permet d'instancier l'objet avant de pouvoir définir les valeurs des champs à partir des données JSON
+        /// </summary>
+        public Book()
+        {
+            titre = string.Empty;
+            nomAuteur = string.Empty;
+            prenomAuteur = string.Empty;
+            genre = string.Empty;
+            statut = string.Empty;
+            note = string.Empty;
+        }
 
         /// <summary>
         /// Constructeur de la classe Livre
@@ -69,10 +86,15 @@ namespace TriBibliv2.model
             get { return statut; }
             set { statut = value; }
         }
-        public string Notes
+        public string Note
         {
             get { return note; }
             set { note = value; }
+        }
+
+        public override string ToString()
+        {
+            return this.NomAuteur.ToUpper() + " " + this.PrenomAuteur + " " + this.Titre + " " + this.Genre + " " + this.Statut;
         }
     }
 }

@@ -3,7 +3,7 @@ using System.IO;
 using System.Text.Json;
 using TriBibliv2.model;
 
-namespace TriBibliv2.dal
+namespace TriBibliv2.controller
 {
     internal class Serialize
     {
@@ -35,7 +35,7 @@ namespace TriBibliv2.dal
             /// </summary>  
             /// <param name="fichier">nom du fichier de sauvegarde</param>  
             /// <returns>objet désérialisé</returns>  
-            public static object? Recup(string fichier)
+            public static List<Book>? Recup(string fichier)
             {
                 // Contrôle de l'existence du fichier  
                 if (File.Exists(fichier))
@@ -46,7 +46,6 @@ namespace TriBibliv2.dal
                         string json = File.ReadAllText(fichier);
                         // désérialisation de l'objet à partir du JSON  
                         return JsonSerializer.Deserialize<List<Book>>(json);
-
                     }
                     catch
                     {
