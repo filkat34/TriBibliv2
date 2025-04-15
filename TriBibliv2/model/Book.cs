@@ -59,42 +59,57 @@ namespace TriBibliv2.model
         }
 
         /// <summary>
-        /// Getters et setters de la classe Livre
+        /// Getter et setter de l'attribut titre
         /// </summary>
         public string Titre
         {
             get { return titre; }
             set { titre = value; }
         }
+
+        /// <summary>
+        /// Getter et setter de l'attribut nomAuteur
+        /// </summary>
         public string NomAuteur
         {
             get { return nomAuteur; }
             set { nomAuteur = value; }
         }
+
+        /// <summary>
+        /// Getter et setter de l'attribut prenomAuteur
+        /// </summary>
         public string PrenomAuteur
         {
             get { return prenomAuteur; }
             set { prenomAuteur = value; }
         }
+
+        /// <summary>
+        /// Getter et setter de l'attribut genre
+        /// </summary>
         public string Genre
         {
             get { return genre; }
             set { genre = value; }
         }
+
+        /// <summary>
+        /// Getter et setter de l'attribut statut
+        /// </summary>
         public string Statut
         {
             get { return statut; }
             set { statut = value; }
         }
+
+        /// <summary>
+        /// Getter et setter de l'attribut note
+        /// </summary>
         public string Note
         {
             get { return note; }
             set { note = value; }
-        }
-
-        public override string ToString()
-        {
-            return this.NomAuteur.ToUpper() + " " + this.PrenomAuteur + " " + this.Titre + " " + this.Genre + " " + this.Statut;
         }
     }
 }

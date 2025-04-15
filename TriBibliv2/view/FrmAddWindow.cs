@@ -21,7 +21,7 @@ namespace TriBibliv2.view
         List<Book> listLivres = new List<Book>();
 
         /// <summary>
-        /// Controleur de la fenêtre principale
+        /// Controleur de la fenêtre d'ajout
         /// </summary>
         private FrmAddWindowController controller;
 
@@ -32,6 +32,8 @@ namespace TriBibliv2.view
 
         /// <summary>
         /// Initialisation de la fenêtre
+        /// Récupération de la liste de livres depuis la fenêtre principale
+        /// Intitialisation du controleur
         /// </summary>
         public FrmAddWindow(List<Book> livres)
         {

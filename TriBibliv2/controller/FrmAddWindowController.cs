@@ -11,10 +11,11 @@ namespace TriBibliv2.controller
     public class FrmAddWindowController
     {
         /// <summary>
-        /// Ajoute le livre à la liste
-        /// Sauvegarde la liste dans le fichier JSON
+        /// Ajoute un livre à la liste
         /// </summary>
         /// <param name="book"></param>
+        /// <param name="uneliste"></param>
+        /// <param name="unfichier"></param>
         public void AddBook(Book book, List<Book> uneliste, string unfichier)
         {
             uneliste.Add(book);
@@ -25,6 +26,7 @@ namespace TriBibliv2.controller
         /// Vérifie si le livre existe déjà dans la liste
         /// </summary>
         /// <param name="unlivre"></param>
+        /// <param name="listLivres"></param>
         /// <returns></returns>
         public bool DoublonTrouve(Book unlivre, List<Book> listLivres)
         {

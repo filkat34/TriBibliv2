@@ -20,18 +20,17 @@ namespace TriBibliv2.view
         List<Book> listLivres = new List<Book>();
 
         /// <summary>
-        /// Objet pour gérer la liste des personnels
+        /// Binding list pour la liste des livres
         /// </summary>
         private BindingSource bdgLivres = new BindingSource();
 
         /// <summary>
-        /// Controleur de la fenêtre
+        /// Controleur de la fenêtre principale
         /// </summary>
         private FrmMainWindowController controller;
 
-
         /// <summary>
-        /// Initialisation de la fenêtre de gestion des livres
+        /// Initialisation de la fenêtre principale
         /// </summary>
         public FrmMainWindow()
         {
@@ -41,13 +40,36 @@ namespace TriBibliv2.view
 
         /// <summary>
         /// Initialisations :
-        /// Création du controleur et remplissage des listes
+        /// Création du controleur
+        /// Création du dossier de sauvegarde s'il n'existe pas
+        /// Remplissage de la GridView avec la liste des livres
         /// </summary>
         private void Init()
         {
             controller = new FrmMainWindowController();
             controller.CreateSaveFolder();
             RemplirListeLivres();
+            GridViewCustomize();
+        }
+
+        /// <summary>
+        /// Customisations de la GridView :
+        /// Modification de l'odre des colonnes
+        /// Masquage de la colonne PrenomAuteur et Genre
+        /// Ajuster la taille de la colonne titre au contenu
+        /// Tri de la liste des livres par nom d'auteur
+        /// </summary>
+        private void GridViewCustomize()
+        {
+            // Set column display order
+            GridVBookList.Columns["NomAuteur"].DisplayIndex = 0;
+            GridVBookList.Columns["Titre"].DisplayIndex = 1;
+            GridVBookList.Columns["Genre"].DisplayIndex = 2;
+            GridVBookList.Columns["Statut"].DisplayIndex = 3;
+            GridVBookList.Columns["PrenomAuteur"].DisplayIndex = 4;
+            GridVBookList.Columns["PrenomAuteur"].Visible = false;
+            GridVBookList.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            listLivres.Sort((auteur1, auteur2) => auteur1.NomAuteur.CompareTo(auteur2.NomAuteur));
         }
 
         /// <summary>
@@ -75,6 +97,7 @@ namespace TriBibliv2.view
                 RemplirListeLivres();
             }
         }
+
         /// <summary>
         /// Supprime le livre sélectionné
         /// </summary>

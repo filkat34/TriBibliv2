@@ -25,19 +25,16 @@ namespace TriBibliv2.controller
 
 
         /// <summary>
-        /// Création du dossier de sauvegarde s'ils n'existent pas
+        /// Création du dossier de sauvegarde s'il n'existent pas
+        /// Enregistrement du chemin d'accès au fichier de sauvegarde
         /// </summary>
         public void CreateSaveFolder() { 
-
-            // création du dossier de sauvegarde s'il n'existe pas
             Directory.CreateDirectory(dossierSauvegarde);
-
-            // chemin d'accès au fichier de sauvegarde
             nomFic = Path.Combine(dossierSauvegarde, "sauvLivres.json");
         }
 
         /// <summary>
-        /// Récupère et retourne les infos sur les livres
+        /// Récupère et retourne les informations sur les livres
         /// </summary>
         /// <returns>liste des livres</returns>
         public List<Book> GetBooks()
