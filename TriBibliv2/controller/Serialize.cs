@@ -25,8 +25,8 @@ namespace TriBibliv2.controller
                 {
                     File.Delete(fichier);
                 }
-                // sérialisation de l'objet en JSON  
-                string json = JsonSerializer.Serialize(objet);
+                // sérialisation de l'objet en JSON
+                string json = JsonSerializer.Serialize(objet, new JsonSerializerOptions { WriteIndented = true });
                 File.WriteAllText(fichier, json);
             }
 
