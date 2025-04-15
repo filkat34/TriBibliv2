@@ -69,7 +69,7 @@ namespace TriBibliv2.view
         /// <param name="e"></param>
         private void BtnAdd_Click(object sender, EventArgs e)
         {
-            Form addBookForm = new FrmAddWindow();
+            Form addBookForm = new FrmAddWindow(listLivres);
             if (addBookForm.ShowDialog() == DialogResult.OK)
             {
                 RemplirListeLivres();

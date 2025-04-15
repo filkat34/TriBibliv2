@@ -52,7 +52,7 @@ namespace TriBibliv2.controller
 
         /// <summary>
         /// Supprime le livre de la liste
-        /// Sauvegardera la liste dans le fichier JSON
+        /// Sauvegarde la liste dans le fichier JSON
         /// </summary>
         /// <param name="book"></param>
         public void DelBook(Book book)
