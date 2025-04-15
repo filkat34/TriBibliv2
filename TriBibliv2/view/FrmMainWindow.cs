@@ -31,21 +31,13 @@ namespace TriBibliv2.view
 
         /// <summary>
         /// Initialisation de la fenêtre principale
+        /// Création du contrôleur
+        /// Création du dossier de sauvegarde s'il n'existe pas
+        /// Remplissage de la GridView avec la liste des livres
         /// </summary>
         public FrmMainWindow()
         {
             InitializeComponent();
-            Init();
-        }
-
-        /// <summary>
-        /// Initialisations :
-        /// Création du controleur
-        /// Création du dossier de sauvegarde s'il n'existe pas
-        /// Remplissage de la GridView avec la liste des livres
-        /// </summary>
-        private void Init()
-        {
             controller = new FrmMainWindowController();
             controller.CreateSaveFolder();
             RemplirListeLivres();
@@ -61,7 +53,6 @@ namespace TriBibliv2.view
         /// </summary>
         private void GridViewCustomize()
         {
-            // Set column display order
             GridVBookList.Columns["NomAuteur"].DisplayIndex = 0;
             GridVBookList.Columns[1].HeaderText = "Auteur";
             GridVBookList.Columns["Titre"].DisplayIndex = 1;
@@ -111,6 +102,24 @@ namespace TriBibliv2.view
                 if (MessageBox.Show("Voulez-vous vraiment supprimer " + livre.Titre.ToUpper() + " ?", "Confirmation de suppression", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
                     controller.DelBook(livre);
+                    RemplirListeLivres();
+                }
+            }
+        }
+
+        /// <summary>
+        /// Ouvre la fenêtre de modification du livre sélectionné
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void BtnModify_Click(object sender, EventArgs e)
+        {
+            if (GridVBookList.SelectedRows.Count > 0)
+            {
+                Book livre = (Book)bdgLivres.List[bdgLivres.Position];
+                Form modifyBookForm = new FrmModifyWindow(livre, listLivres);
+                if (modifyBookForm.ShowDialog() == DialogResult.Yes)
+                {
                     RemplirListeLivres();
                 }
             }

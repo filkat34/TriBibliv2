@@ -1,6 +1,6 @@
 ﻿namespace TriBibliv2.view
 {
-    partial class FrmModifyWIndow
+    partial class FrmModifyWindow
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             CBoxNote = new ComboBox();
-            BtnSave = new Button();
+            BtnSaveModification = new Button();
             CBoxStatut = new ComboBox();
             CBoxGenre = new ComboBox();
             txtBoxTitle = new TextBox();
@@ -53,14 +53,15 @@
             CBoxNote.Size = new Size(168, 29);
             CBoxNote.TabIndex = 39;
             // 
-            // BtnSave
+            // BtnSaveModification
             // 
-            BtnSave.Location = new Point(200, 293);
-            BtnSave.Name = "BtnSave";
-            BtnSave.Size = new Size(130, 37);
-            BtnSave.TabIndex = 38;
-            BtnSave.Text = "Enregistrer";
-            BtnSave.UseVisualStyleBackColor = true;
+            BtnSaveModification.Location = new Point(200, 293);
+            BtnSaveModification.Name = "BtnSaveModification";
+            BtnSaveModification.Size = new Size(130, 37);
+            BtnSaveModification.TabIndex = 38;
+            BtnSaveModification.Text = "Enregistrer";
+            BtnSaveModification.UseVisualStyleBackColor = true;
+            BtnSaveModification.Click += BtnSaveModification_Click;
             // 
             // CBoxStatut
             // 
@@ -157,13 +158,13 @@
             label1.TabIndex = 27;
             label1.Text = "Nom";
             // 
-            // FrmModifyWIndow
+            // FrmModifyWindow
             // 
             AutoScaleDimensions = new SizeF(9F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(498, 348);
             Controls.Add(CBoxNote);
-            Controls.Add(BtnSave);
+            Controls.Add(BtnSaveModification);
             Controls.Add(CBoxStatut);
             Controls.Add(CBoxGenre);
             Controls.Add(txtBoxTitle);
@@ -178,8 +179,9 @@
             MaximizeBox = false;
             MaximumSize = new Size(514, 388);
             MinimumSize = new Size(514, 388);
-            Name = "FrmModifyWIndow";
+            Name = "FrmModifyWindow";
             SizeGripStyle = SizeGripStyle.Hide;
+            StartPosition = FormStartPosition.CenterParent;
             Text = "Modifier un livre";
             ResumeLayout(false);
             PerformLayout();
@@ -188,7 +190,7 @@
         #endregion
 
         private ComboBox CBoxNote;
-        private Button BtnSave;
+        private Button BtnSaveModification;
         private ComboBox CBoxStatut;
         private ComboBox CBoxGenre;
         private TextBox txtBoxTitle;

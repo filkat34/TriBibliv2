@@ -75,8 +75,7 @@ namespace TriBibliv2.view
                     if (MessageBox.Show("Un même livre semble être déjà présent dans la base. Voulez-vous vraiment ajouter : " + newbook.Titre.ToUpper() + " ?", "Confirmation d'ajout", MessageBoxButtons.YesNo) == DialogResult.Yes)
                     {
                         controller.AddBook(newbook, listLivres, nomFic);
-                        DialogResult = DialogResult.OK;
-                        
+                        DialogResult = DialogResult.OK;  
                     }
                 }
                 else

@@ -207,6 +207,7 @@
             BtnModify.TabIndex = 4;
             BtnModify.Text = "Modifier";
             BtnModify.UseVisualStyleBackColor = true;
+            BtnModify.Click += BtnModify_Click;
             // 
             // BtnDelete
             // 
