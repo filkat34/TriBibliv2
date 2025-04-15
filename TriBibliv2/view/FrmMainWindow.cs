@@ -60,7 +60,11 @@ namespace TriBibliv2.view
             GridVBookList.Columns["Statut"].DisplayIndex = 3;
             GridVBookList.Columns["PrenomAuteur"].DisplayIndex = 4;
             GridVBookList.Columns["PrenomAuteur"].Visible = false;
-            GridVBookList.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            GridVBookList.Columns[1].FillWeight = 60;
+            GridVBookList.Columns[3].FillWeight = 50;
+            GridVBookList.Columns[4].FillWeight = 50;
+            GridVBookList.Columns[5].FillWeight = 50;
+            GridVBookList.Columns[0].FillWeight = 100;
             listLivres.Sort((auteur1, auteur2) => auteur1.NomAuteur.CompareTo(auteur2.NomAuteur));
         }
 
