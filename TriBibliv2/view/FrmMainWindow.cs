@@ -49,13 +49,13 @@ namespace TriBibliv2.view
             controller = new FrmMainWindowController();
             controller.CreateSaveFolder();
             RemplirListeLivres();
-            GridViewCustomize();
         }
 
         /// <summary>
         /// Customisations de la GridView :
         /// Modification de l'odre des colonnes
-        /// Masquage de la colonne PrenomAuteur et Genre
+        /// Masquage de la colonne PrenomAuteur
+        /// Modification du titre de la colonne "NomAuteur"
         /// Ajuster la taille de la colonne titre au contenu
         /// Tri de la liste des livres par nom d'auteur
         /// </summary>
@@ -63,6 +63,7 @@ namespace TriBibliv2.view
         {
             // Set column display order
             GridVBookList.Columns["NomAuteur"].DisplayIndex = 0;
+            GridVBookList.Columns[1].HeaderText = "Auteur";
             GridVBookList.Columns["Titre"].DisplayIndex = 1;
             GridVBookList.Columns["Genre"].DisplayIndex = 2;
             GridVBookList.Columns["Statut"].DisplayIndex = 3;
@@ -80,8 +81,7 @@ namespace TriBibliv2.view
             listLivres = controller.GetBooks();
             bdgLivres.DataSource = listLivres;
             GridVBookList.DataSource = bdgLivres;
-            GridVBookList.Columns[1].HeaderText = "Auteur";
-            GridVBookList.Columns["PrenomAuteur"].Visible = false;
+            GridViewCustomize();
         }
 
         /// <summary>
