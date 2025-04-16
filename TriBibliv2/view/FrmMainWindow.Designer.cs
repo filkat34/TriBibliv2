@@ -171,7 +171,7 @@
             groupBox2.Size = new Size(612, 66);
             groupBox2.TabIndex = 2;
             groupBox2.TabStop = false;
-            groupBox2.Text = "Recherche";
+            groupBox2.Text = "Recherche par titre ou nom d'auteur";
             // 
             // BtnErase
             // 
@@ -181,6 +181,7 @@
             BtnErase.TabIndex = 1;
             BtnErase.Text = "Effacer";
             BtnErase.UseVisualStyleBackColor = true;
+            BtnErase.Click += BtnErase_Click;
             // 
             // TxtBxSearch
             // 
@@ -188,6 +189,7 @@
             TxtBxSearch.Name = "TxtBxSearch";
             TxtBxSearch.Size = new Size(506, 29);
             TxtBxSearch.TabIndex = 0;
+            TxtBxSearch.TextChanged += TxtBxSearch_TextChanged;
             // 
             // BtnAdd
             // 

@@ -77,6 +77,7 @@ namespace TriBibliv2.view
             bdgLivres.DataSource = listLivres;
             GridVBookList.DataSource = bdgLivres;
             GridViewCustomize();
+            TxtBxSearch.Clear();
         }
 
         /// <summary>
@@ -128,5 +129,45 @@ namespace TriBibliv2.view
                 }
             }
         }
-    }
+
+        /// <summary>
+        /// Efface la textbox de recherche
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void BtnErase_Click(object sender, EventArgs e)
+        {
+            TxtBxSearch.Clear();
+        }
+
+        /// <summary>
+        /// Recherche un livre dans la liste de livres
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void TxtBxSearch_TextChanged(object sender, EventArgs e)
+        {
+            List<Book> listResultatsRecherche = new List<Book>();
+            GridVBookList.DataSource = null;
+
+            if (string.IsNullOrEmpty(TxtBxSearch.Text) == false)
+            {
+                foreach (Book livre in listLivres)
+                {
+                    if (livre.NomAuteur.ToUpper().Contains(TxtBxSearch.Text.ToUpper()) | livre.Titre.ToUpper().Contains(TxtBxSearch.Text.ToUpper()))
+                    {
+                        listResultatsRecherche.Add(livre);
+                    }
+                }
+                bdgLivres.DataSource = listResultatsRecherche;
+                GridVBookList.DataSource = listResultatsRecherche;
+                GridViewCustomize();
+            }
+
+            if (TxtBxSearch.Text == "")
+            {
+                RemplirListeLivres();
+            }
+        }
+    } 
 }
