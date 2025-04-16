@@ -64,6 +64,40 @@ namespace TriBibliv2.view
             listLivres.Sort((auteur1, auteur2) => auteur1.NomAuteur.CompareTo(auteur2.NomAuteur));
         }
 
+
+        /// <summary>
+        /// Met à jour les ComboBox des filtres en fonction des attributs des livres présents dans la liste
+        /// </summary>
+        private void ComboBoxFiltersMaj()
+        {
+            CBoxFilterStatut.Items.Clear();
+            foreach(Book livre in listLivres)
+            {
+                if (!CBoxFilterStatut.Items.Contains(livre.Statut))
+                {
+                    CBoxFilterStatut.Items.Add(livre.Statut);
+                }
+            }
+
+            CBoxFilterNote.Items.Clear();
+            foreach (Book livre in listLivres)
+            {
+                if (!CBoxFilterNote.Items.Contains(livre.Note))
+                {
+                    CBoxFilterNote.Items.Add(livre.Note);
+                }
+            }
+
+            CBoxFilterGenre.Items.Clear();
+            foreach (Book livre in listLivres)
+            {
+                if (!CBoxFilterGenre.Items.Contains(livre.Genre))
+                {
+                    CBoxFilterGenre.Items.Add(livre.Genre);
+                }
+            }
+        }
+
         /// <summary>
         /// Affiche la liste des livres
         /// </summary>
@@ -73,6 +107,7 @@ namespace TriBibliv2.view
             bdgLivres.DataSource = listLivres;
             GridVBookList.DataSource = bdgLivres;
             GridViewCustomize();
+            ComboBoxFiltersMaj();
             TxtBxSearch.Clear();
             ResetFilters();
         }
