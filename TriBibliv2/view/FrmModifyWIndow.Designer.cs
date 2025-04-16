@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmModifyWindow));
             CBoxNote = new ComboBox();
             BtnSaveModification = new Button();
             CBoxStatut = new ComboBox();
@@ -41,6 +42,11 @@
             label3 = new Label();
             label2 = new Label();
             label1 = new Label();
+            BtnModGenreTag = new Button();
+            BtnModStatutTag = new Button();
+            BtnModTagNote = new Button();
+            label7 = new Label();
+            TxtBoxObservations = new RichTextBox();
             SuspendLayout();
             // 
             // CBoxNote
@@ -51,11 +57,12 @@
             CBoxNote.Location = new Point(109, 238);
             CBoxNote.Name = "CBoxNote";
             CBoxNote.Size = new Size(168, 29);
+            CBoxNote.Sorted = true;
             CBoxNote.TabIndex = 39;
             // 
             // BtnSaveModification
             // 
-            BtnSaveModification.Location = new Point(200, 293);
+            BtnSaveModification.Location = new Point(197, 483);
             BtnSaveModification.Name = "BtnSaveModification";
             BtnSaveModification.Size = new Size(130, 37);
             BtnSaveModification.TabIndex = 38;
@@ -71,16 +78,18 @@
             CBoxStatut.Location = new Point(109, 198);
             CBoxStatut.Name = "CBoxStatut";
             CBoxStatut.Size = new Size(271, 29);
+            CBoxStatut.Sorted = true;
             CBoxStatut.TabIndex = 37;
             // 
             // CBoxGenre
             // 
             CBoxGenre.DropDownStyle = ComboBoxStyle.DropDownList;
             CBoxGenre.FormattingEnabled = true;
-            CBoxGenre.Items.AddRange(new object[] { "Arts et loisirs", "BD", "Cuisine", "Essai", "Manuel", "Poésie", "Récit", "Théâtre", "Autre" });
+            CBoxGenre.Items.AddRange(new object[] { "Arts et loisirs", "Autre", "BD", "Cuisine", "Essai", "Manuel", "Poésie", "Récit", "Théâtre" });
             CBoxGenre.Location = new Point(109, 155);
             CBoxGenre.Name = "CBoxGenre";
             CBoxGenre.Size = new Size(271, 29);
+            CBoxGenre.Sorted = true;
             CBoxGenre.TabIndex = 36;
             // 
             // txtBoxTitle
@@ -158,11 +167,63 @@
             label1.TabIndex = 27;
             label1.Text = "Nom";
             // 
+            // BtnModGenreTag
+            // 
+            BtnModGenreTag.BackgroundImage = (Image)resources.GetObject("BtnModGenreTag.BackgroundImage");
+            BtnModGenreTag.BackgroundImageLayout = ImageLayout.Stretch;
+            BtnModGenreTag.Location = new Point(386, 155);
+            BtnModGenreTag.Name = "BtnModGenreTag";
+            BtnModGenreTag.Size = new Size(29, 29);
+            BtnModGenreTag.TabIndex = 40;
+            BtnModGenreTag.UseVisualStyleBackColor = true;
+            // 
+            // BtnModStatutTag
+            // 
+            BtnModStatutTag.BackgroundImage = (Image)resources.GetObject("BtnModStatutTag.BackgroundImage");
+            BtnModStatutTag.BackgroundImageLayout = ImageLayout.Stretch;
+            BtnModStatutTag.Location = new Point(386, 198);
+            BtnModStatutTag.Name = "BtnModStatutTag";
+            BtnModStatutTag.Size = new Size(29, 29);
+            BtnModStatutTag.TabIndex = 41;
+            BtnModStatutTag.UseVisualStyleBackColor = true;
+            // 
+            // BtnModTagNote
+            // 
+            BtnModTagNote.BackgroundImage = (Image)resources.GetObject("BtnModTagNote.BackgroundImage");
+            BtnModTagNote.BackgroundImageLayout = ImageLayout.Stretch;
+            BtnModTagNote.Location = new Point(283, 238);
+            BtnModTagNote.Name = "BtnModTagNote";
+            BtnModTagNote.Size = new Size(29, 29);
+            BtnModTagNote.TabIndex = 42;
+            BtnModTagNote.UseVisualStyleBackColor = true;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(36, 286);
+            label7.Name = "label7";
+            label7.Size = new Size(102, 21);
+            label7.TabIndex = 44;
+            label7.Text = "Observations";
+            // 
+            // TxtBoxObservations
+            // 
+            TxtBoxObservations.Location = new Point(36, 320);
+            TxtBoxObservations.Name = "TxtBoxObservations";
+            TxtBoxObservations.Size = new Size(460, 152);
+            TxtBoxObservations.TabIndex = 43;
+            TxtBoxObservations.Text = "";
+            // 
             // FrmModifyWindow
             // 
             AutoScaleDimensions = new SizeF(9F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(498, 348);
+            ClientSize = new Size(531, 532);
+            Controls.Add(label7);
+            Controls.Add(TxtBoxObservations);
+            Controls.Add(BtnModTagNote);
+            Controls.Add(BtnModStatutTag);
+            Controls.Add(BtnModGenreTag);
             Controls.Add(CBoxNote);
             Controls.Add(BtnSaveModification);
             Controls.Add(CBoxStatut);
@@ -177,8 +238,8 @@
             Controls.Add(label2);
             Controls.Add(label1);
             MaximizeBox = false;
-            MaximumSize = new Size(514, 388);
-            MinimumSize = new Size(514, 388);
+            MaximumSize = new Size(547, 572);
+            MinimumSize = new Size(547, 572);
             Name = "FrmModifyWindow";
             SizeGripStyle = SizeGripStyle.Hide;
             StartPosition = FormStartPosition.CenterParent;
@@ -202,5 +263,10 @@
         private Label label3;
         private Label label2;
         private Label label1;
+        private Button BtnModGenreTag;
+        private Button BtnModStatutTag;
+        private Button BtnModTagNote;
+        private Label label7;
+        private RichTextBox TxtBoxObservations;
     }
 }

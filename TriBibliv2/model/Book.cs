@@ -22,7 +22,8 @@ namespace TriBibliv2.model
         private string prenomAuteur;
         private string genre;// roman, essai, théâtre, poésie, BD, usuels, autres, etc.
         private string statut; //conserver, donner, vendre, recycler
-        private string note; //notes sur le livre
+        private string note; //note sur le livre
+        private string observation; //observations sur le livre
 
 
         /// <summary>
@@ -37,6 +38,7 @@ namespace TriBibliv2.model
             genre = string.Empty;
             statut = string.Empty;
             note = string.Empty;
+            observation = string.Empty;
         }
 
         /// <summary>
@@ -48,7 +50,9 @@ namespace TriBibliv2.model
         /// <param name="unGenre"></param>
         /// <param name="unStatut"></param>
         /// <param name="uneNote"></param>
-        public Book(string unTitre, string unNomAuteur, string unPrenomAuteur, string unGenre, string unStatut, string uneNote)
+        /// <<param name="uneObservation"></param>
+        public Book(string unTitre, string unNomAuteur, string unPrenomAuteur, 
+            string unGenre, string unStatut, string uneNote, string uneObservation)
         {
             this.titre = unTitre;
             this.nomAuteur = unNomAuteur;
@@ -56,6 +60,7 @@ namespace TriBibliv2.model
             this.genre = unGenre;
             this.statut = unStatut;
             this.note = uneNote;
+            this.observation = uneObservation;
         }
 
         /// <summary>
@@ -111,6 +116,16 @@ namespace TriBibliv2.model
             get { return note; }
             set { note = value; }
         }
+
+        /// <summary>
+        /// Getter et setter de l'attribut observation
+        /// </summary>
+        public string Observation
+        {
+            get { return observation; }
+            set { observation = value; }
+        }
+        
     }
 }
 

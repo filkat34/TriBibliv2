@@ -32,6 +32,7 @@
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             GridVBookList = new DataGridView();
             groupBox1 = new GroupBox();
+            BtnResetfilters = new Button();
             label3 = new Label();
             CBoxFilterNote = new ComboBox();
             label2 = new Label();
@@ -45,7 +46,6 @@
             BtnModify = new Button();
             BtnDelete = new Button();
             BtnStats = new Button();
-            BtnResetfilters = new Button();
             ((System.ComponentModel.ISupportInitialize)GridVBookList).BeginInit();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
@@ -107,6 +107,16 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Filtres rapides";
             // 
+            // BtnResetfilters
+            // 
+            BtnResetfilters.Location = new Point(517, 18);
+            BtnResetfilters.Name = "BtnResetfilters";
+            BtnResetfilters.Size = new Size(88, 28);
+            BtnResetfilters.TabIndex = 6;
+            BtnResetfilters.Text = "Effacer";
+            BtnResetfilters.UseVisualStyleBackColor = true;
+            BtnResetfilters.Click += BtnResetfilters_Click;
+            // 
             // label3
             // 
             label3.AutoSize = true;
@@ -124,6 +134,7 @@
             CBoxFilterNote.Location = new Point(247, 56);
             CBoxFilterNote.Name = "CBoxFilterNote";
             CBoxFilterNote.Size = new Size(166, 29);
+            CBoxFilterNote.Sorted = true;
             CBoxFilterNote.TabIndex = 4;
             CBoxFilterNote.SelectedIndexChanged += CBoxFilterNote_SelectedIndexChanged;
             // 
@@ -153,6 +164,7 @@
             CBoxFilterStatut.Location = new Point(434, 56);
             CBoxFilterStatut.Name = "CBoxFilterStatut";
             CBoxFilterStatut.Size = new Size(166, 29);
+            CBoxFilterStatut.Sorted = true;
             CBoxFilterStatut.TabIndex = 1;
             CBoxFilterStatut.SelectedIndexChanged += CBoxFilterStatut_SelectedIndexChanged;
             // 
@@ -160,10 +172,11 @@
             // 
             CBoxFilterGenre.DropDownStyle = ComboBoxStyle.DropDownList;
             CBoxFilterGenre.FormattingEnabled = true;
-            CBoxFilterGenre.Items.AddRange(new object[] { "Arts et loisirs", "BD", "Cuisine", "Essai", "Manuel", "Poésie", "Récit", "Théâtre", "Autre" });
+            CBoxFilterGenre.Items.AddRange(new object[] { "Arts et loisirs", "Autre", "BD", "Cuisine", "Essai", "Manuel", "Poésie", "Récit", "Théâtre" });
             CBoxFilterGenre.Location = new Point(6, 56);
             CBoxFilterGenre.Name = "CBoxFilterGenre";
             CBoxFilterGenre.Size = new Size(221, 29);
+            CBoxFilterGenre.Sorted = true;
             CBoxFilterGenre.TabIndex = 0;
             CBoxFilterGenre.SelectedIndexChanged += CBoxFilterGenre_SelectedIndexChanged;
             // 
@@ -234,16 +247,6 @@
             BtnStats.TabIndex = 6;
             BtnStats.Text = "Statistiques";
             BtnStats.UseVisualStyleBackColor = true;
-            // 
-            // BtnResetfilters
-            // 
-            BtnResetfilters.Location = new Point(517, 18);
-            BtnResetfilters.Name = "BtnResetfilters";
-            BtnResetfilters.Size = new Size(88, 28);
-            BtnResetfilters.TabIndex = 6;
-            BtnResetfilters.Text = "Effacer";
-            BtnResetfilters.UseVisualStyleBackColor = true;
-            BtnResetfilters.Click += BtnResetfilters_Click;
             // 
             // FrmMainWindow
             // 

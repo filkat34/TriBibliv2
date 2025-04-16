@@ -59,7 +59,8 @@ namespace TriBibliv2.view
             GridVBookList.Columns[1].FillWeight = 60;
             GridVBookList.Columns[3].FillWeight = 50;
             GridVBookList.Columns[4].FillWeight = 50;
-            GridVBookList.Columns[5].FillWeight = 50;
+            GridVBookList.Columns[5].FillWeight = 30;
+            GridVBookList.Columns[6].FillWeight = 50;
             GridVBookList.Columns[0].FillWeight = 100;
             listLivres.Sort((auteur1, auteur2) => auteur1.NomAuteur.CompareTo(auteur2.NomAuteur));
         }

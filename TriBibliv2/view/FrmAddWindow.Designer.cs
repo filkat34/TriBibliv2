@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAddWindow));
             BtnSave = new Button();
             CBoxStatut = new ComboBox();
             CBoxGenre = new ComboBox();
@@ -41,11 +42,16 @@
             label2 = new Label();
             label1 = new Label();
             CBoxNote = new ComboBox();
+            button1 = new Button();
+            BtnModStatutTag = new Button();
+            BtnModNoteTag = new Button();
+            TxtBoxObservations = new RichTextBox();
+            label7 = new Label();
             SuspendLayout();
             // 
             // BtnSave
             // 
-            BtnSave.Location = new Point(198, 289);
+            BtnSave.Location = new Point(185, 490);
             BtnSave.Name = "BtnSave";
             BtnSave.Size = new Size(130, 37);
             BtnSave.TabIndex = 25;
@@ -61,16 +67,18 @@
             CBoxStatut.Location = new Point(107, 194);
             CBoxStatut.Name = "CBoxStatut";
             CBoxStatut.Size = new Size(271, 29);
+            CBoxStatut.Sorted = true;
             CBoxStatut.TabIndex = 23;
             // 
             // CBoxGenre
             // 
             CBoxGenre.DropDownStyle = ComboBoxStyle.DropDownList;
             CBoxGenre.FormattingEnabled = true;
-            CBoxGenre.Items.AddRange(new object[] { "Arts et loisirs", "BD", "Cuisine", "Essai", "Manuel", "Poésie", "Récit", "Théâtre", "Autre" });
+            CBoxGenre.Items.AddRange(new object[] { "Arts et loisirs", "Autre", "BD", "Cuisine", "Essai", "Manuel", "Poésie", "Récit", "Théâtre" });
             CBoxGenre.Location = new Point(107, 151);
             CBoxGenre.Name = "CBoxGenre";
             CBoxGenre.Size = new Size(271, 29);
+            CBoxGenre.Sorted = true;
             CBoxGenre.TabIndex = 22;
             // 
             // txtBoxTitle
@@ -156,13 +164,66 @@
             CBoxNote.Location = new Point(107, 234);
             CBoxNote.Name = "CBoxNote";
             CBoxNote.Size = new Size(168, 29);
+            CBoxNote.Sorted = true;
             CBoxNote.TabIndex = 26;
+            // 
+            // button1
+            // 
+            button1.BackgroundImage = (Image)resources.GetObject("button1.BackgroundImage");
+            button1.BackgroundImageLayout = ImageLayout.Stretch;
+            button1.Location = new Point(389, 151);
+            button1.Name = "button1";
+            button1.Size = new Size(29, 29);
+            button1.TabIndex = 27;
+            button1.UseVisualStyleBackColor = true;
+            // 
+            // BtnModStatutTag
+            // 
+            BtnModStatutTag.BackgroundImage = (Image)resources.GetObject("BtnModStatutTag.BackgroundImage");
+            BtnModStatutTag.BackgroundImageLayout = ImageLayout.Stretch;
+            BtnModStatutTag.Location = new Point(389, 193);
+            BtnModStatutTag.Name = "BtnModStatutTag";
+            BtnModStatutTag.Size = new Size(29, 29);
+            BtnModStatutTag.TabIndex = 28;
+            BtnModStatutTag.UseVisualStyleBackColor = true;
+            // 
+            // BtnModNoteTag
+            // 
+            BtnModNoteTag.BackgroundImage = (Image)resources.GetObject("BtnModNoteTag.BackgroundImage");
+            BtnModNoteTag.BackgroundImageLayout = ImageLayout.Stretch;
+            BtnModNoteTag.Location = new Point(286, 233);
+            BtnModNoteTag.Name = "BtnModNoteTag";
+            BtnModNoteTag.Size = new Size(29, 29);
+            BtnModNoteTag.TabIndex = 29;
+            BtnModNoteTag.UseVisualStyleBackColor = true;
+            // 
+            // TxtBoxObservations
+            // 
+            TxtBoxObservations.Location = new Point(19, 316);
+            TxtBoxObservations.Name = "TxtBoxObservations";
+            TxtBoxObservations.Size = new Size(460, 152);
+            TxtBoxObservations.TabIndex = 30;
+            TxtBoxObservations.Text = "";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(19, 282);
+            label7.Name = "label7";
+            label7.Size = new Size(102, 21);
+            label7.TabIndex = 31;
+            label7.Text = "Observations";
             // 
             // FrmAddWindow
             // 
             AutoScaleDimensions = new SizeF(9F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(498, 348);
+            ClientSize = new Size(506, 539);
+            Controls.Add(label7);
+            Controls.Add(TxtBoxObservations);
+            Controls.Add(BtnModNoteTag);
+            Controls.Add(BtnModStatutTag);
+            Controls.Add(button1);
             Controls.Add(CBoxNote);
             Controls.Add(BtnSave);
             Controls.Add(CBoxStatut);
@@ -177,8 +238,8 @@
             Controls.Add(label2);
             Controls.Add(label1);
             MaximizeBox = false;
-            MaximumSize = new Size(514, 388);
-            MinimumSize = new Size(514, 388);
+            MaximumSize = new Size(522, 579);
+            MinimumSize = new Size(522, 579);
             Name = "FrmAddWindow";
             SizeGripStyle = SizeGripStyle.Hide;
             StartPosition = FormStartPosition.CenterParent;
@@ -203,5 +264,10 @@
         private Label label2;
         private Label label1;
         private ComboBox CBoxNote;
+        private Button button1;
+        private Button BtnModStatutTag;
+        private Button BtnModNoteTag;
+        private RichTextBox TxtBoxObservations;
+        private Label label7;
     }
 }

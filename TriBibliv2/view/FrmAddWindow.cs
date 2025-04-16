@@ -62,15 +62,21 @@ namespace TriBibliv2.view
                     txtBoxAuthorSurname.Text = " ";
                 }
 
+                if (TxtBoxObservations.Text.Equals(""))
+                {
+                    TxtBoxObservations.Text = " ";
+                }
+
                 Book newbook = new Book(
                     txtBoxTitle.Text,
                     txtBAuthorName.Text,
                     txtBoxAuthorSurname.Text,
                     CBoxGenre.SelectedItem.ToString(),
                     CBoxStatut.SelectedItem.ToString(),
-                    CBoxNote.Text.ToString());
+                    CBoxNote.Text.ToString(),
+                    TxtBoxObservations.Text);
 
-                if (controller.DoublonTrouve(newbook, listLivres))
+                    if (controller.DoublonTrouve(newbook, listLivres))
                 {
                     if (MessageBox.Show("Un même livre semble être déjà présent dans la base. Voulez-vous vraiment ajouter : " + newbook.Titre.ToUpper() + " ?", "Confirmation d'ajout", MessageBoxButtons.YesNo) == DialogResult.Yes)
                     {
