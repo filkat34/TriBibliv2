@@ -45,6 +45,7 @@
             BtnModify = new Button();
             BtnDelete = new Button();
             BtnStats = new Button();
+            BtnResetfilters = new Button();
             ((System.ComponentModel.ISupportInitialize)GridVBookList).BeginInit();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
@@ -92,6 +93,7 @@
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(BtnResetfilters);
             groupBox1.Controls.Add(label3);
             groupBox1.Controls.Add(CBoxFilterNote);
             groupBox1.Controls.Add(label2);
@@ -118,11 +120,12 @@
             // 
             CBoxFilterNote.DropDownStyle = ComboBoxStyle.DropDownList;
             CBoxFilterNote.FormattingEnabled = true;
-            CBoxFilterNote.Items.AddRange(new object[] { " ", "*", "**", "***", "****" });
+            CBoxFilterNote.Items.AddRange(new object[] { " *", "**", "***", "****" });
             CBoxFilterNote.Location = new Point(247, 56);
             CBoxFilterNote.Name = "CBoxFilterNote";
             CBoxFilterNote.Size = new Size(166, 29);
             CBoxFilterNote.TabIndex = 4;
+            CBoxFilterNote.SelectedIndexChanged += CBoxFilterNote_SelectedIndexChanged;
             // 
             // label2
             // 
@@ -146,21 +149,23 @@
             // 
             CBoxFilterStatut.DropDownStyle = ComboBoxStyle.DropDownList;
             CBoxFilterStatut.FormattingEnabled = true;
-            CBoxFilterStatut.Items.AddRange(new object[] { " ", "Conserver", "Donner", "Recycler", "Vendre" });
+            CBoxFilterStatut.Items.AddRange(new object[] { "Conserver", "Donner", "Recycler", "Vendre" });
             CBoxFilterStatut.Location = new Point(434, 56);
             CBoxFilterStatut.Name = "CBoxFilterStatut";
             CBoxFilterStatut.Size = new Size(166, 29);
             CBoxFilterStatut.TabIndex = 1;
+            CBoxFilterStatut.SelectedIndexChanged += CBoxFilterStatut_SelectedIndexChanged;
             // 
             // CBoxFilterGenre
             // 
             CBoxFilterGenre.DropDownStyle = ComboBoxStyle.DropDownList;
             CBoxFilterGenre.FormattingEnabled = true;
-            CBoxFilterGenre.Items.AddRange(new object[] { " ", "Arts et loisirs", "BD", "Cuisine", "Essai", "Manuel", "Poésie", "Récit", "Théâtre", "Autre" });
+            CBoxFilterGenre.Items.AddRange(new object[] { "Arts et loisirs", "BD", "Cuisine", "Essai", "Manuel", "Poésie", "Récit", "Théâtre", "Autre" });
             CBoxFilterGenre.Location = new Point(6, 56);
             CBoxFilterGenre.Name = "CBoxFilterGenre";
             CBoxFilterGenre.Size = new Size(221, 29);
             CBoxFilterGenre.TabIndex = 0;
+            CBoxFilterGenre.SelectedIndexChanged += CBoxFilterGenre_SelectedIndexChanged;
             // 
             // groupBox2
             // 
@@ -230,6 +235,16 @@
             BtnStats.Text = "Statistiques";
             BtnStats.UseVisualStyleBackColor = true;
             // 
+            // BtnResetfilters
+            // 
+            BtnResetfilters.Location = new Point(517, 18);
+            BtnResetfilters.Name = "BtnResetfilters";
+            BtnResetfilters.Size = new Size(88, 28);
+            BtnResetfilters.TabIndex = 6;
+            BtnResetfilters.Text = "Effacer";
+            BtnResetfilters.UseVisualStyleBackColor = true;
+            BtnResetfilters.Click += BtnResetfilters_Click;
+            // 
             // FrmMainWindow
             // 
             AutoScaleDimensions = new SizeF(9F, 21F);
@@ -274,5 +289,6 @@
         private Button BtnStats;
         private Label label3;
         private ComboBox CBoxFilterNote;
+        private Button BtnResetfilters;
     }
 }

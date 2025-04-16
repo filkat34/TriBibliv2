@@ -44,12 +44,8 @@ namespace TriBibliv2.view
         }
 
         /// <summary>
-        /// Customisations de la GridView :
-        /// Modification de l'odre des colonnes
-        /// Masquage de la colonne PrenomAuteur
-        /// Modification du titre de la colonne "NomAuteur"
-        /// Ajuster la taille de la colonne titre au contenu
-        /// Tri de la liste des livres par nom d'auteur
+        /// Customisations de l'apparence de GridView
+        /// Tri alpha de la liste des livres par nom d'auteur
         /// </summary>
         private void GridViewCustomize()
         {
@@ -141,6 +137,18 @@ namespace TriBibliv2.view
         }
 
         /// <summary>
+        /// Affiche un message si aucun livre ne correspond à la recherche
+        /// </summary>
+        /// <param name="uneliste"></param>
+        private void AucunResultat(List <Book> uneliste)
+        {
+            if (uneliste.Count() == 0)
+            {
+                MessageBox.Show("Aucun livre ne correspond à la recherche", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        /// <summary>
         /// Recherche un livre dans la liste de livres
         /// </summary>
         /// <param name="sender"></param>
@@ -162,6 +170,7 @@ namespace TriBibliv2.view
                 bdgLivres.DataSource = listResultatsRecherche;
                 GridVBookList.DataSource = listResultatsRecherche;
                 GridViewCustomize();
+                AucunResultat(listResultatsRecherche);
             }
 
             if (TxtBxSearch.Text == "")
@@ -169,5 +178,81 @@ namespace TriBibliv2.view
                 RemplirListeLivres();
             }
         }
-    } 
+
+        /// <summary>
+        /// Retourne les livres correspondant aux critères de filtre
+        /// </summary>
+        public void FilterBooks()
+        {
+            List<Book> listResultatsRecherche = new List<Book>();
+            GridVBookList.DataSource = null;
+
+            foreach (Book livre in listLivres)
+            {
+                if ((CBoxFilterGenre.SelectedIndex == -1 || livre.Genre == CBoxFilterGenre.Text) &&
+                    (CBoxFilterNote.SelectedIndex == -1 || livre.Note == CBoxFilterNote.Text) &&
+                    (CBoxFilterStatut.SelectedIndex == -1 || livre.Statut == CBoxFilterStatut.Text))
+                {
+                    listResultatsRecherche.Add(livre);
+                }
+            }
+            bdgLivres.DataSource = listResultatsRecherche;
+            GridVBookList.DataSource = listResultatsRecherche;
+            GridViewCustomize();
+            AucunResultat(listResultatsRecherche);
+        }
+
+        /// <summary>
+        /// Filtre la liste des livres en fonction du genre
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void CBoxFilterGenre_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (CBoxFilterGenre.SelectedIndex != -1)
+            {
+                FilterBooks();
+            }
+            
+        }
+
+        /// <summary>
+        /// Filtre la liste des livres en fonction de la note
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void CBoxFilterNote_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (CBoxFilterNote.SelectedIndex != -1)
+            {
+                FilterBooks();
+            }
+        }
+
+        /// <summary>
+        /// Filtre la liste des livres en fonction du statut
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void CBoxFilterStatut_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (CBoxFilterStatut.SelectedIndex != -1)
+            {
+                FilterBooks();
+            }
+        }
+
+        /// <summary>
+        /// Effacer tous les filtres
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void BtnResetfilters_Click(object sender, EventArgs e)
+        {
+            CBoxFilterGenre.SelectedIndex = -1;
+            CBoxFilterNote.SelectedIndex = -1;
+            CBoxFilterStatut.SelectedIndex = -1;
+            RemplirListeLivres();
+        }
+    }
 }
