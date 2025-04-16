@@ -74,6 +74,7 @@ namespace TriBibliv2.view
             GridVBookList.DataSource = bdgLivres;
             GridViewCustomize();
             TxtBxSearch.Clear();
+            ResetFilters();
         }
 
         /// <summary>
@@ -203,6 +204,16 @@ namespace TriBibliv2.view
         }
 
         /// <summary>
+        /// Efface tous les filtres de la liste des livres
+        /// </summary>
+        public void ResetFilters()
+        {
+            CBoxFilterGenre.SelectedIndex = -1;
+            CBoxFilterNote.SelectedIndex = -1;
+            CBoxFilterStatut.SelectedIndex = -1;
+        }
+
+        /// <summary>
         /// Filtre la liste des livres en fonction du genre
         /// </summary>
         /// <param name="sender"></param>
@@ -249,9 +260,7 @@ namespace TriBibliv2.view
         /// <param name="e"></param>
         private void BtnResetfilters_Click(object sender, EventArgs e)
         {
-            CBoxFilterGenre.SelectedIndex = -1;
-            CBoxFilterNote.SelectedIndex = -1;
-            CBoxFilterStatut.SelectedIndex = -1;
+            ResetFilters();
             RemplirListeLivres();
         }
     }
