@@ -1,5 +1,3 @@
-using TriBibliv2.view;
-
 namespace TriBibliv2
 {
     internal static class Program
