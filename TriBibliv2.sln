@@ -1,20 +1,34 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35931.197 d17.13
+VisualStudioVersion = 17.13.35931.197
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TriBibliv2", "TriBibliv2\TriBibliv2.csproj", "{AA90EEAC-FCAC-4A76-BCB3-8B31FD554121}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Install", "Install\Install.vdproj", "{0F48EF4B-3063-23E4-72C6-21544904F984}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
 		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{AA90EEAC-FCAC-4A76-BCB3-8B31FD554121}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{AA90EEAC-FCAC-4A76-BCB3-8B31FD554121}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA90EEAC-FCAC-4A76-BCB3-8B31FD554121}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{AA90EEAC-FCAC-4A76-BCB3-8B31FD554121}.Debug|x64.Build.0 = Debug|Any CPU
 		{AA90EEAC-FCAC-4A76-BCB3-8B31FD554121}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AA90EEAC-FCAC-4A76-BCB3-8B31FD554121}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA90EEAC-FCAC-4A76-BCB3-8B31FD554121}.Release|x64.ActiveCfg = Release|Any CPU
+		{AA90EEAC-FCAC-4A76-BCB3-8B31FD554121}.Release|x64.Build.0 = Release|Any CPU
+		{0F48EF4B-3063-23E4-72C6-21544904F984}.Debug|Any CPU.ActiveCfg = Debug
+		{0F48EF4B-3063-23E4-72C6-21544904F984}.Debug|Any CPU.Build.0 = Debug
+		{0F48EF4B-3063-23E4-72C6-21544904F984}.Debug|x64.ActiveCfg = Debug
+		{0F48EF4B-3063-23E4-72C6-21544904F984}.Release|Any CPU.ActiveCfg = Release
+		{0F48EF4B-3063-23E4-72C6-21544904F984}.Release|Any CPU.Build.0 = Release
+		{0F48EF4B-3063-23E4-72C6-21544904F984}.Release|x64.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
