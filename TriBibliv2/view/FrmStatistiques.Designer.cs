@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             label1 = new Label();
             labelNbBooks = new Label();
             label3 = new Label();
@@ -82,17 +83,32 @@
             // 
             dataGridViewStats.AllowUserToAddRows = false;
             dataGridViewStats.AllowUserToDeleteRows = false;
-            dataGridViewStats.BackgroundColor = SystemColors.Control;
+            dataGridViewStats.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewStats.BackgroundColor = SystemColors.ControlLightLight;
+            dataGridViewStats.CellBorderStyle = DataGridViewCellBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = SystemColors.Control;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 12F);
+            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Control;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dataGridViewStats.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewStats.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewStats.Cursor = Cursors.Hand;
+            dataGridViewStats.EnableHeadersVisualStyles = false;
             dataGridViewStats.Location = new Point(12, 108);
+            dataGridViewStats.MultiSelect = false;
             dataGridViewStats.Name = "dataGridViewStats";
             dataGridViewStats.ReadOnly = true;
-            dataGridViewStats.Size = new Size(514, 437);
+            dataGridViewStats.RowHeadersVisible = false;
+            dataGridViewStats.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGridViewStats.Size = new Size(514, 257);
             dataGridViewStats.TabIndex = 4;
             // 
             // BtnClose
             // 
-            BtnClose.Location = new Point(214, 559);
+            BtnClose.Location = new Point(212, 382);
             BtnClose.Name = "BtnClose";
             BtnClose.Size = new Size(96, 32);
             BtnClose.TabIndex = 5;
@@ -104,7 +120,7 @@
             // 
             AutoScaleDimensions = new SizeF(9F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(538, 603);
+            ClientSize = new Size(538, 425);
             Controls.Add(BtnClose);
             Controls.Add(dataGridViewStats);
             Controls.Add(ComboBoxStatsEtiquette);
@@ -112,8 +128,8 @@
             Controls.Add(labelNbBooks);
             Controls.Add(label1);
             MaximizeBox = false;
-            MaximumSize = new Size(554, 643);
-            MinimumSize = new Size(554, 643);
+            MaximumSize = new Size(554, 465);
+            MinimumSize = new Size(554, 465);
             Name = "FrmStatistiques";
             SizeGripStyle = SizeGripStyle.Hide;
             StartPosition = FormStartPosition.CenterParent;

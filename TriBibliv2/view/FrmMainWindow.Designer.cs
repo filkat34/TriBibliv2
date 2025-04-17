@@ -46,9 +46,15 @@
             BtnModify = new Button();
             BtnDelete = new Button();
             BtnStats = new Button();
+            menuStrip1 = new MenuStrip();
+            fichierToolStripMenuItem = new ToolStripMenuItem();
+            importerDepuisUnFichierJsonToolStripMenuItem = new ToolStripMenuItem();
+            aProposToolStripMenuItem = new ToolStripMenuItem();
+            quitterToolStripMenuItem = new ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)GridVBookList).BeginInit();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
+            menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // GridVBookList
@@ -60,10 +66,9 @@
             GridVBookList.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             GridVBookList.BackgroundColor = SystemColors.ControlLightLight;
             GridVBookList.CellBorderStyle = DataGridViewCellBorderStyle.None;
-            GridVBookList.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = SystemColors.ButtonFace;
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 12F);
             dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
             dataGridViewCellStyle1.SelectionBackColor = SystemColors.ButtonFace;
             dataGridViewCellStyle1.SelectionForeColor = SystemColors.ActiveCaptionText;
@@ -72,7 +77,7 @@
             GridVBookList.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             GridVBookList.Cursor = Cursors.Hand;
             GridVBookList.EnableHeadersVisualStyles = false;
-            GridVBookList.Location = new Point(12, 12);
+            GridVBookList.Location = new Point(12, 32);
             GridVBookList.MultiSelect = false;
             GridVBookList.Name = "GridVBookList";
             GridVBookList.ReadOnly = true;
@@ -88,7 +93,7 @@
             GridVBookList.RowHeadersVisible = false;
             GridVBookList.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             GridVBookList.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            GridVBookList.Size = new Size(751, 594);
+            GridVBookList.Size = new Size(751, 574);
             GridVBookList.TabIndex = 0;
             // 
             // groupBox1
@@ -249,6 +254,42 @@
             BtnStats.UseVisualStyleBackColor = true;
             BtnStats.Click += BtnStats_Click;
             // 
+            // menuStrip1
+            // 
+            menuStrip1.Items.AddRange(new ToolStripItem[] { fichierToolStripMenuItem });
+            menuStrip1.Location = new Point(0, 0);
+            menuStrip1.Name = "menuStrip1";
+            menuStrip1.Size = new Size(775, 29);
+            menuStrip1.TabIndex = 7;
+            menuStrip1.Text = "menuStrip1";
+            // 
+            // fichierToolStripMenuItem
+            // 
+            fichierToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { importerDepuisUnFichierJsonToolStripMenuItem, aProposToolStripMenuItem, quitterToolStripMenuItem });
+            fichierToolStripMenuItem.Name = "fichierToolStripMenuItem";
+            fichierToolStripMenuItem.Size = new Size(68, 25);
+            fichierToolStripMenuItem.Text = "Fichier";
+            // 
+            // importerDepuisUnFichierJsonToolStripMenuItem
+            // 
+            importerDepuisUnFichierJsonToolStripMenuItem.Name = "importerDepuisUnFichierJsonToolStripMenuItem";
+            importerDepuisUnFichierJsonToolStripMenuItem.Size = new Size(266, 26);
+            importerDepuisUnFichierJsonToolStripMenuItem.Text = "Importer une bibliothèque ";
+            // 
+            // aProposToolStripMenuItem
+            // 
+            aProposToolStripMenuItem.Name = "aProposToolStripMenuItem";
+            aProposToolStripMenuItem.Size = new Size(266, 26);
+            aProposToolStripMenuItem.Text = "A propos";
+            aProposToolStripMenuItem.Click += aProposToolStripMenuItem_Click;
+            // 
+            // quitterToolStripMenuItem
+            // 
+            quitterToolStripMenuItem.Name = "quitterToolStripMenuItem";
+            quitterToolStripMenuItem.Size = new Size(266, 26);
+            quitterToolStripMenuItem.Text = "Quitter";
+            quitterToolStripMenuItem.Click += quitterToolStripMenuItem_Click;
+            // 
             // FrmMainWindow
             // 
             AutoScaleDimensions = new SizeF(9F, 21F);
@@ -261,6 +302,7 @@
             Controls.Add(BtnAdd);
             Controls.Add(groupBox2);
             Controls.Add(GridVBookList);
+            Controls.Add(menuStrip1);
             MaximizeBox = false;
             MaximumSize = new Size(791, 829);
             MinimumSize = new Size(791, 829);
@@ -273,7 +315,10 @@
             groupBox1.PerformLayout();
             groupBox2.ResumeLayout(false);
             groupBox2.PerformLayout();
+            menuStrip1.ResumeLayout(false);
+            menuStrip1.PerformLayout();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -294,5 +339,10 @@
         private Label label3;
         private ComboBox CBoxFilterNote;
         private Button BtnResetfilters;
+        private MenuStrip menuStrip1;
+        private ToolStripMenuItem fichierToolStripMenuItem;
+        private ToolStripMenuItem importerDepuisUnFichierJsonToolStripMenuItem;
+        private ToolStripMenuItem aProposToolStripMenuItem;
+        private ToolStripMenuItem quitterToolStripMenuItem;
     }
 }

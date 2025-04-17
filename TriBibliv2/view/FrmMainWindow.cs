@@ -299,5 +299,16 @@ namespace TriBibliv2.view
             Form statsForm = new FrmStatistiques(listLivres);
             statsForm.ShowDialog();
         }
+
+        private void quitterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void aProposToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frmabout = new FrmAbout();
+            frmabout.ShowDialog();
+        }
     }
 }
