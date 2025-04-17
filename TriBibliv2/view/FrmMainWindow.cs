@@ -1,4 +1,5 @@
 ﻿using System.Data;
+using System.Windows.Forms;
 using TriBibliv2.controller;
 using TriBibliv2.model;
 
@@ -319,6 +320,31 @@ namespace TriBibliv2.view
         {
             Form frmabout = new FrmAbout();
             frmabout.ShowDialog();
+        }
+
+        /// <summary>
+        /// Demande d'exportation de la liste des livres en JSON 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void exporterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string folderPath = "";
+            FolderBrowserDialog folderBrowserDialog1 = new FolderBrowserDialog();
+            if (folderBrowserDialog1.ShowDialog() == DialogResult.OK)
+            {
+                folderPath = folderBrowserDialog1.SelectedPath.ToString();
+            }
+            if (folderPath != "")
+            {
+                controller.ExportBooks(folderPath);
+                MessageBox.Show("Exportation terminée !", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void aPartirDunFichierJSONToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

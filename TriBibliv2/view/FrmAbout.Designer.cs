@@ -58,6 +58,7 @@
             btnCloseAbout.TabIndex = 1;
             btnCloseAbout.Text = "OK";
             btnCloseAbout.UseVisualStyleBackColor = true;
+            btnCloseAbout.Click += btnCloseAbout_Click;
             // 
             // linkGithub
             // 

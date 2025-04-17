@@ -35,5 +35,15 @@ namespace TriBibliv2.view
             };
             System.Diagnostics.Process.Start(psi);
         }
+
+        /// <summary>
+        /// Fermetures de la fenêtre a propos
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnCloseAbout_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

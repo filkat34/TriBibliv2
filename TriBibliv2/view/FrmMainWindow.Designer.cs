@@ -49,10 +49,11 @@
             BtnStats = new Button();
             menuStrip1 = new MenuStrip();
             importerToolStripMenuItem = new ToolStripMenuItem();
+            aPartirDunFichierJSONToolStripMenuItem = new ToolStripMenuItem();
+            exporterToolStripMenuItem = new ToolStripMenuItem();
             fichierToolStripMenuItem = new ToolStripMenuItem();
             aProposToolStripMenuItem = new ToolStripMenuItem();
             quitterToolStripMenuItem = new ToolStripMenuItem();
-            aPartirDunFichierJSONToolStripMenuItem = new ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)GridVBookList).BeginInit();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
@@ -267,10 +268,24 @@
             // 
             // importerToolStripMenuItem
             // 
-            importerToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { aPartirDunFichierJSONToolStripMenuItem });
+            importerToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { aPartirDunFichierJSONToolStripMenuItem, exporterToolStripMenuItem });
             importerToolStripMenuItem.Name = "importerToolStripMenuItem";
-            importerToolStripMenuItem.Size = new Size(83, 25);
-            importerToolStripMenuItem.Text = "Importer";
+            importerToolStripMenuItem.Size = new Size(109, 25);
+            importerToolStripMenuItem.Text = "Bibliothèque";
+            // 
+            // aPartirDunFichierJSONToolStripMenuItem
+            // 
+            aPartirDunFichierJSONToolStripMenuItem.Name = "aPartirDunFichierJSONToolStripMenuItem";
+            aPartirDunFichierJSONToolStripMenuItem.Size = new Size(180, 26);
+            aPartirDunFichierJSONToolStripMenuItem.Text = "Importer";
+            aPartirDunFichierJSONToolStripMenuItem.Click += aPartirDunFichierJSONToolStripMenuItem_Click;
+            // 
+            // exporterToolStripMenuItem
+            // 
+            exporterToolStripMenuItem.Name = "exporterToolStripMenuItem";
+            exporterToolStripMenuItem.Size = new Size(180, 26);
+            exporterToolStripMenuItem.Text = "Exporter";
+            exporterToolStripMenuItem.Click += exporterToolStripMenuItem_Click;
             // 
             // fichierToolStripMenuItem
             // 
@@ -292,12 +307,6 @@
             quitterToolStripMenuItem.Size = new Size(143, 26);
             quitterToolStripMenuItem.Text = "Quitter";
             quitterToolStripMenuItem.Click += quitterToolStripMenuItem_Click;
-            // 
-            // aPartirDunFichierJSONToolStripMenuItem
-            // 
-            aPartirDunFichierJSONToolStripMenuItem.Name = "aPartirDunFichierJSONToolStripMenuItem";
-            aPartirDunFichierJSONToolStripMenuItem.Size = new Size(257, 26);
-            aPartirDunFichierJSONToolStripMenuItem.Text = "A partir d'un fichier JSON";
             // 
             // FrmMainWindow
             // 
@@ -355,5 +364,6 @@
         private ToolStripMenuItem quitterToolStripMenuItem;
         private ToolStripMenuItem importerToolStripMenuItem;
         private ToolStripMenuItem aPartirDunFichierJSONToolStripMenuItem;
+        private ToolStripMenuItem exporterToolStripMenuItem;
     }
 }

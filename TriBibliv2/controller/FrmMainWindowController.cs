@@ -1,4 +1,5 @@
-﻿using TriBibliv2.model;
+﻿using System.Xml.Linq;
+using TriBibliv2.model;
 using static TriBibliv2.controller.Serialize;
 
 
@@ -54,6 +55,15 @@ namespace TriBibliv2.controller
         {
             listLivres.Remove(book);
             Serialise.Sauve(nomFic, listLivres);
+        }
+
+        /// <summary>
+        /// Exporte la liste des livres dans un fichier JSON
+        /// </summary>
+        /// <param name="pathfolder"></param>
+        public void ExportBooks(string pathfolder)
+        {
+            File.Copy(nomFic, Path.Combine(pathfolder, "TriBibliexport.json"), true);
         }
     }
 }
