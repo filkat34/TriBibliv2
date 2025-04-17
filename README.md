@@ -20,4 +20,4 @@ Ce programme vous permet de :
 
 ## Prise en main 
 
-Vous pouvez télécharger l'installateur de ce programme [ici](https://www.filipposk.ovh/programmes/TriBibli.msi).
+Vous pouvez télécharger l'installateur de cette application [ici](https://www.filipposk.ovh/programmes/TriBibli.msi).
