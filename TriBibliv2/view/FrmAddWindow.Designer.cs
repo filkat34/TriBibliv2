@@ -42,7 +42,7 @@
             label2 = new Label();
             label1 = new Label();
             CBoxNote = new ComboBox();
-            button1 = new Button();
+            BtnModGenreTag = new Button();
             BtnModStatutTag = new Button();
             BtnModNoteTag = new Button();
             TxtBoxObservations = new RichTextBox();
@@ -167,15 +167,16 @@
             CBoxNote.Sorted = true;
             CBoxNote.TabIndex = 26;
             // 
-            // button1
+            // BtnModGenreTag
             // 
-            button1.BackgroundImage = (Image)resources.GetObject("button1.BackgroundImage");
-            button1.BackgroundImageLayout = ImageLayout.Stretch;
-            button1.Location = new Point(389, 151);
-            button1.Name = "button1";
-            button1.Size = new Size(29, 29);
-            button1.TabIndex = 27;
-            button1.UseVisualStyleBackColor = true;
+            BtnModGenreTag.BackgroundImage = (Image)resources.GetObject("BtnModGenreTag.BackgroundImage");
+            BtnModGenreTag.BackgroundImageLayout = ImageLayout.Stretch;
+            BtnModGenreTag.Location = new Point(389, 151);
+            BtnModGenreTag.Name = "BtnModGenreTag";
+            BtnModGenreTag.Size = new Size(29, 29);
+            BtnModGenreTag.TabIndex = 27;
+            BtnModGenreTag.UseVisualStyleBackColor = true;
+            BtnModGenreTag.Click += BtnModGenreTag_Click;
             // 
             // BtnModStatutTag
             // 
@@ -186,6 +187,7 @@
             BtnModStatutTag.Size = new Size(29, 29);
             BtnModStatutTag.TabIndex = 28;
             BtnModStatutTag.UseVisualStyleBackColor = true;
+            BtnModStatutTag.Click += BtnModStatutTag_Click;
             // 
             // BtnModNoteTag
             // 
@@ -196,6 +198,7 @@
             BtnModNoteTag.Size = new Size(29, 29);
             BtnModNoteTag.TabIndex = 29;
             BtnModNoteTag.UseVisualStyleBackColor = true;
+            BtnModNoteTag.Click += BtnModNoteTag_Click;
             // 
             // TxtBoxObservations
             // 
@@ -223,7 +226,7 @@
             Controls.Add(TxtBoxObservations);
             Controls.Add(BtnModNoteTag);
             Controls.Add(BtnModStatutTag);
-            Controls.Add(button1);
+            Controls.Add(BtnModGenreTag);
             Controls.Add(CBoxNote);
             Controls.Add(BtnSave);
             Controls.Add(CBoxStatut);
@@ -264,7 +267,7 @@
         private Label label2;
         private Label label1;
         private ComboBox CBoxNote;
-        private Button button1;
+        private Button BtnModGenreTag;
         private Button BtnModStatutTag;
         private Button BtnModNoteTag;
         private RichTextBox TxtBoxObservations;

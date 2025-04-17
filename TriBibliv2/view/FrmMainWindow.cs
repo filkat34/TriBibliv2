@@ -120,7 +120,8 @@ namespace TriBibliv2.view
         /// <param name="e"></param>
         private void BtnAdd_Click(object sender, EventArgs e)
         {
-            Form addBookForm = new FrmAddWindow(listLivres);
+            Form addBookForm = new FrmAddWindow(listLivres, CBoxFilterStatut.Items.Cast<string>().ToList(),
+                CBoxFilterNote.Items.Cast<string>().ToList(), CBoxFilterGenre.Items.Cast<string>().ToList());
             if (addBookForm.ShowDialog() == DialogResult.OK)
             {
                 RemplirListeLivres();
@@ -155,7 +156,8 @@ namespace TriBibliv2.view
             if (GridVBookList.SelectedRows.Count > 0)
             {
                 Book livre = (Book)bdgLivres.List[bdgLivres.Position];
-                Form modifyBookForm = new FrmModifyWindow(livre, listLivres);
+                Form modifyBookForm = new FrmModifyWindow(livre, listLivres, CBoxFilterStatut.Items.Cast<string>().ToList(),
+                CBoxFilterNote.Items.Cast<string>().ToList(), CBoxFilterGenre.Items.Cast<string>().ToList());
                 if (modifyBookForm.ShowDialog() == DialogResult.Yes)
                 {
                     RemplirListeLivres();

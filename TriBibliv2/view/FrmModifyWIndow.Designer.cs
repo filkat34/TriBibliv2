@@ -176,6 +176,7 @@
             BtnModGenreTag.Size = new Size(29, 29);
             BtnModGenreTag.TabIndex = 40;
             BtnModGenreTag.UseVisualStyleBackColor = true;
+            BtnModGenreTag.Click += BtnModGenreTag_Click;
             // 
             // BtnModStatutTag
             // 
@@ -186,6 +187,7 @@
             BtnModStatutTag.Size = new Size(29, 29);
             BtnModStatutTag.TabIndex = 41;
             BtnModStatutTag.UseVisualStyleBackColor = true;
+            BtnModStatutTag.Click += BtnModStatutTag_Click;
             // 
             // BtnModTagNote
             // 
@@ -196,6 +198,7 @@
             BtnModTagNote.Size = new Size(29, 29);
             BtnModTagNote.TabIndex = 42;
             BtnModTagNote.UseVisualStyleBackColor = true;
+            BtnModTagNote.Click += BtnModTagNote_Click;
             // 
             // label7
             // 

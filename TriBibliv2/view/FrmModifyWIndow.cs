@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using TriBibliv2.controller;
 using TriBibliv2.model;
 
+
 namespace TriBibliv2.view
 {
     public partial class FrmModifyWindow : Form
@@ -36,16 +37,35 @@ namespace TriBibliv2.view
         string nomFic = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), @"TriBibli\sauvLivres.json");
 
         /// <summary>
+        /// Liste pour gérer les étiquettes concernant le gere
+        /// </summary>
+        private List<string> comboboxGenrelist = new List<string>();
+
+        /// <summary>
+        /// Liste pour gérer les étiquettes concernant le statut
+        /// </summary>
+        private List<string> comboboxStatutlist = new List<string>();
+
+        /// <summary>
+        /// Liste pour gérer les étiquettes concernant la note
+        /// </summary>
+        private List<string> comboboxNotelist = new List<string>();
+
+        /// <summary>
         /// Initialisation de la fenêtre de modification
         /// </summary>
         /// <param name="unlivre"></param>
         /// <param name="uneliste"></param>
-        public FrmModifyWindow(Book unlivre, List<Book> uneliste)
+        public FrmModifyWindow(Book unlivre, List<Book> uneliste, List<String> statuts, List<string> notes, List<string> genres)
         {
             InitializeComponent();
             controller = new FrmModifyController();
             listLivres = uneliste;
             livreamodifier = unlivre;
+            comboboxStatutlist = statuts;
+            comboboxGenrelist = genres;
+            comboboxNotelist = notes;
+            MajComboBoxes();
             FillInBookInfo(livreamodifier);
         }
 
@@ -62,6 +82,28 @@ namespace TriBibliv2.view
             CBoxStatut.SelectedIndex = CBoxStatut.FindStringExact(unlivre.Statut);
             CBoxNote.SelectedIndex = CBoxNote.FindStringExact(unlivre.Note);
             TxtBoxObservations.Text = unlivre.Observation;
+        }
+
+        /// <summary>
+        /// Fonction qui met à jour les comboboxes de la fenêtre depuis la liste de livres
+        /// </summary>
+        public void MajComboBoxes()
+        {
+            CBoxStatut.Items.Clear();
+            CBoxGenre.Items.Clear();
+            CBoxNote.Items.Clear();
+            foreach (string item in comboboxStatutlist)
+            {
+                CBoxStatut.Items.Add(item);
+            }
+            foreach (string item in comboboxGenrelist)
+            {
+                CBoxGenre.Items.Add(item);
+            }
+            foreach (string item in comboboxNotelist)
+            {
+                CBoxNote.Items.Add(item);
+            }
         }
 
         /// <summary>
@@ -88,14 +130,14 @@ namespace TriBibliv2.view
                     TxtBoxObservations.Text = " ";
                 }
 
-                    Book modifiedbook = new Book(
-                    txtBoxTitle.Text,
-                    txtBAuthorName.Text,
-                    txtBoxAuthorSurname.Text,
-                    CBoxGenre.SelectedItem.ToString(),
-                    CBoxStatut.SelectedItem.ToString(),
-                    CBoxNote.Text.ToString(),
-                    TxtBoxObservations.Text);
+                Book modifiedbook = new Book(
+                txtBoxTitle.Text,
+                txtBAuthorName.Text,
+                txtBoxAuthorSurname.Text,
+                CBoxGenre.SelectedItem.ToString(),
+                CBoxStatut.SelectedItem.ToString(),
+                CBoxNote.Text.ToString(),
+                TxtBoxObservations.Text);
 
                 if (MessageBox.Show("Voulez-vous apporter des modifications au livre suivant : " + livreamodifier.Titre.ToUpper() + " de " + livreamodifier.NomAuteur + " ?", "Confirmation de modification", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
@@ -103,6 +145,40 @@ namespace TriBibliv2.view
                     DialogResult = DialogResult.Yes;
                 }
             }
+        }
+
+        /// <summary>
+        /// Fonction qui ouvre la fenêtre de gestion des étiquettes en mettant à jour leur liste
+        /// </summary>
+        /// <param name="label"></param>
+        /// <param name="ComboBoxlist"></param>
+        /// <param name="items"></param>
+        public void MajAdminTags(string label, List<string> ComboBoxlist, ComboBox.ObjectCollection items)
+        {
+            FrmGestionTags gestionTags = new FrmGestionTags(label, ComboBoxlist);
+            if (gestionTags.ShowDialog() == DialogResult.OK)
+            {
+                items.Clear();
+                foreach (string item in gestionTags.SendData())
+                {
+                    items.Add(item);
+                }
+            }
+        }
+
+        private void BtnModGenreTag_Click(object sender, EventArgs e)
+        {
+            MajAdminTags("Nouveau genre :", comboboxGenrelist, CBoxGenre.Items);
+        }
+
+        private void BtnModStatutTag_Click(object sender, EventArgs e)
+        {
+            MajAdminTags("Nouveau statut :", comboboxStatutlist, CBoxStatut.Items);
+        }
+
+        private void BtnModTagNote_Click(object sender, EventArgs e)
+        {
+            MajAdminTags("Nouvelle note :", comboboxNotelist, CBoxNote.Items);
         }
     }
 }
