@@ -1,13 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Text.Json.Serialization;
-using System.Threading.Tasks;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
-using System.Text.Json;
-
-namespace TriBibliv2.model
+﻿namespace TriBibliv2.model
 {
     /// <summary>
     /// Classe métier Livre

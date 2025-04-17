@@ -1,6 +1,4 @@
-﻿using System;
-using System.IO;
-using System.Text.Json;
+﻿using System.Text.Json;
 using TriBibliv2.model;
 
 namespace TriBibliv2.controller

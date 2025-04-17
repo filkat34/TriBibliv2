@@ -54,7 +54,7 @@
             CBoxNote.DropDownStyle = ComboBoxStyle.DropDownList;
             CBoxNote.FormattingEnabled = true;
             CBoxNote.Items.AddRange(new object[] { "*", "**", "***", "****" });
-            CBoxNote.Location = new Point(109, 238);
+            CBoxNote.Location = new Point(94, 238);
             CBoxNote.Name = "CBoxNote";
             CBoxNote.Size = new Size(168, 29);
             CBoxNote.Sorted = true;
@@ -62,7 +62,7 @@
             // 
             // BtnSaveModification
             // 
-            BtnSaveModification.Location = new Point(197, 483);
+            BtnSaveModification.Location = new Point(182, 483);
             BtnSaveModification.Name = "BtnSaveModification";
             BtnSaveModification.Size = new Size(130, 37);
             BtnSaveModification.TabIndex = 38;
@@ -75,7 +75,7 @@
             CBoxStatut.DropDownStyle = ComboBoxStyle.DropDownList;
             CBoxStatut.FormattingEnabled = true;
             CBoxStatut.Items.AddRange(new object[] { "Conserver", "Donner", "Recycler", "Vendre" });
-            CBoxStatut.Location = new Point(109, 198);
+            CBoxStatut.Location = new Point(94, 198);
             CBoxStatut.Name = "CBoxStatut";
             CBoxStatut.Size = new Size(271, 29);
             CBoxStatut.Sorted = true;
@@ -86,7 +86,7 @@
             CBoxGenre.DropDownStyle = ComboBoxStyle.DropDownList;
             CBoxGenre.FormattingEnabled = true;
             CBoxGenre.Items.AddRange(new object[] { "Arts et loisirs", "Autre", "BD", "Cuisine", "Essai", "Manuel", "Poésie", "Récit", "Théâtre" });
-            CBoxGenre.Location = new Point(109, 155);
+            CBoxGenre.Location = new Point(94, 155);
             CBoxGenre.Name = "CBoxGenre";
             CBoxGenre.Size = new Size(271, 29);
             CBoxGenre.Sorted = true;
@@ -94,21 +94,21 @@
             // 
             // txtBoxTitle
             // 
-            txtBoxTitle.Location = new Point(109, 108);
+            txtBoxTitle.Location = new Point(94, 108);
             txtBoxTitle.Name = "txtBoxTitle";
             txtBoxTitle.Size = new Size(372, 29);
             txtBoxTitle.TabIndex = 35;
             // 
             // txtBoxAuthorSurname
             // 
-            txtBoxAuthorSurname.Location = new Point(109, 60);
+            txtBoxAuthorSurname.Location = new Point(94, 60);
             txtBoxAuthorSurname.Name = "txtBoxAuthorSurname";
             txtBoxAuthorSurname.Size = new Size(372, 29);
             txtBoxAuthorSurname.TabIndex = 34;
             // 
             // txtBAuthorName
             // 
-            txtBAuthorName.Location = new Point(109, 16);
+            txtBAuthorName.Location = new Point(94, 16);
             txtBAuthorName.Name = "txtBAuthorName";
             txtBAuthorName.Size = new Size(372, 29);
             txtBAuthorName.TabIndex = 33;
@@ -116,7 +116,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(36, 246);
+            label6.Location = new Point(21, 246);
             label6.Name = "label6";
             label6.Size = new Size(44, 21);
             label6.TabIndex = 32;
@@ -125,7 +125,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(36, 206);
+            label5.Location = new Point(21, 206);
             label5.Name = "label5";
             label5.Size = new Size(50, 21);
             label5.TabIndex = 31;
@@ -134,7 +134,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(36, 163);
+            label4.Location = new Point(21, 163);
             label4.Name = "label4";
             label4.Size = new Size(52, 21);
             label4.TabIndex = 30;
@@ -143,7 +143,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(47, 116);
+            label3.Location = new Point(32, 116);
             label3.Name = "label3";
             label3.Size = new Size(41, 21);
             label3.TabIndex = 29;
@@ -152,7 +152,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(21, 68);
+            label2.Location = new Point(6, 68);
             label2.Name = "label2";
             label2.Size = new Size(65, 21);
             label2.TabIndex = 28;
@@ -161,7 +161,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(41, 24);
+            label1.Location = new Point(26, 24);
             label1.Name = "label1";
             label1.Size = new Size(45, 21);
             label1.TabIndex = 27;
@@ -171,7 +171,7 @@
             // 
             BtnModGenreTag.BackgroundImage = (Image)resources.GetObject("BtnModGenreTag.BackgroundImage");
             BtnModGenreTag.BackgroundImageLayout = ImageLayout.Stretch;
-            BtnModGenreTag.Location = new Point(386, 155);
+            BtnModGenreTag.Location = new Point(371, 155);
             BtnModGenreTag.Name = "BtnModGenreTag";
             BtnModGenreTag.Size = new Size(29, 29);
             BtnModGenreTag.TabIndex = 40;
@@ -182,7 +182,7 @@
             // 
             BtnModStatutTag.BackgroundImage = (Image)resources.GetObject("BtnModStatutTag.BackgroundImage");
             BtnModStatutTag.BackgroundImageLayout = ImageLayout.Stretch;
-            BtnModStatutTag.Location = new Point(386, 198);
+            BtnModStatutTag.Location = new Point(371, 198);
             BtnModStatutTag.Name = "BtnModStatutTag";
             BtnModStatutTag.Size = new Size(29, 29);
             BtnModStatutTag.TabIndex = 41;
@@ -193,7 +193,7 @@
             // 
             BtnModTagNote.BackgroundImage = (Image)resources.GetObject("BtnModTagNote.BackgroundImage");
             BtnModTagNote.BackgroundImageLayout = ImageLayout.Stretch;
-            BtnModTagNote.Location = new Point(283, 238);
+            BtnModTagNote.Location = new Point(268, 238);
             BtnModTagNote.Name = "BtnModTagNote";
             BtnModTagNote.Size = new Size(29, 29);
             BtnModTagNote.TabIndex = 42;
@@ -203,7 +203,7 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(36, 286);
+            label7.Location = new Point(21, 286);
             label7.Name = "label7";
             label7.Size = new Size(102, 21);
             label7.TabIndex = 44;
@@ -211,7 +211,7 @@
             // 
             // TxtBoxObservations
             // 
-            TxtBoxObservations.Location = new Point(36, 320);
+            TxtBoxObservations.Location = new Point(21, 320);
             TxtBoxObservations.Name = "TxtBoxObservations";
             TxtBoxObservations.Size = new Size(460, 152);
             TxtBoxObservations.TabIndex = 43;
@@ -221,7 +221,7 @@
             // 
             AutoScaleDimensions = new SizeF(9F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(531, 532);
+            ClientSize = new Size(504, 532);
             Controls.Add(label7);
             Controls.Add(TxtBoxObservations);
             Controls.Add(BtnModTagNote);
@@ -241,8 +241,8 @@
             Controls.Add(label2);
             Controls.Add(label1);
             MaximizeBox = false;
-            MaximumSize = new Size(547, 572);
-            MinimumSize = new Size(547, 572);
+            MaximumSize = new Size(520, 572);
+            MinimumSize = new Size(520, 572);
             Name = "FrmModifyWindow";
             SizeGripStyle = SizeGripStyle.Hide;
             StartPosition = FormStartPosition.CenterParent;

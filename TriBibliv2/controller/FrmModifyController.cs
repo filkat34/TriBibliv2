@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static TriBibliv2.controller.Serialize;
+﻿using static TriBibliv2.controller.Serialize;
 using TriBibliv2.model;
 
 namespace TriBibliv2.controller

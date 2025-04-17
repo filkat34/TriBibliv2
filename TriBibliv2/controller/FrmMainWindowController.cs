@@ -1,8 +1,6 @@
-﻿
-using TriBibliv2.model;
+﻿using TriBibliv2.model;
 using static TriBibliv2.controller.Serialize;
-using TriBibliv2.view;
-using System.Text.Json;
+
 
 namespace TriBibliv2.controller
 {

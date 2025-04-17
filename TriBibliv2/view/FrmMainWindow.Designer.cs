@@ -247,6 +247,7 @@
             BtnStats.TabIndex = 6;
             BtnStats.Text = "Statistiques";
             BtnStats.UseVisualStyleBackColor = true;
+            BtnStats.Click += BtnStats_Click;
             // 
             // FrmMainWindow
             // 

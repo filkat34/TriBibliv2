@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Data;
 using TriBibliv2.controller;
 using TriBibliv2.model;
 
@@ -72,7 +64,7 @@ namespace TriBibliv2.view
         private void ComboBoxFiltersMaj()
         {
             CBoxFilterStatut.Items.Clear();
-            foreach(Book livre in listLivres)
+            foreach (Book livre in listLivres)
             {
                 if (!CBoxFilterStatut.Items.Contains(livre.Statut))
                 {
@@ -179,7 +171,7 @@ namespace TriBibliv2.view
         /// Affiche un message si aucun livre ne correspond à la recherche
         /// </summary>
         /// <param name="uneliste"></param>
-        private void AucunResultat(List <Book> uneliste)
+        private void AucunResultat(List<Book> uneliste)
         {
             if (uneliste.Count() == 0)
             {
@@ -262,7 +254,7 @@ namespace TriBibliv2.view
             {
                 FilterBooks();
             }
-            
+
         }
 
         /// <summary>
@@ -300,6 +292,12 @@ namespace TriBibliv2.view
         {
             ResetFilters();
             RemplirListeLivres();
+        }
+
+        private void BtnStats_Click(object sender, EventArgs e)
+        {
+            Form statsForm = new FrmStatistiques(listLivres);
+            statsForm.ShowDialog();
         }
     }
 }

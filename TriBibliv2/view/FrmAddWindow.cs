@@ -1,17 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using static TriBibliv2.controller.Serialize;
-using TriBibliv2.model;
+﻿using TriBibliv2.model;
 using TriBibliv2.controller;
-using System.Diagnostics;
-using System.Collections;
 
 namespace TriBibliv2.view
 {
