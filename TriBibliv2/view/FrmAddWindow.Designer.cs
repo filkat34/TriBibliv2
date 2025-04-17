@@ -240,6 +240,7 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             MaximumSize = new Size(522, 579);
             MinimumSize = new Size(522, 579);
@@ -247,7 +248,6 @@
             SizeGripStyle = SizeGripStyle.Hide;
             StartPosition = FormStartPosition.CenterParent;
             Text = "Ajouter un livre";
-            TopMost = true;
             ResumeLayout(false);
             PerformLayout();
         }

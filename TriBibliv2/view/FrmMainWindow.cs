@@ -300,11 +300,21 @@ namespace TriBibliv2.view
             statsForm.ShowDialog();
         }
 
+        /// <summary>
+        /// Ferme la fenêtre principale
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void quitterToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
+        /// <summary>
+        /// Ouvre la fenêtre a propos
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void aProposToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form frmabout = new FrmAbout();

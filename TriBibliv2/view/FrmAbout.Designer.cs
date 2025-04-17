@@ -120,7 +120,12 @@
             Controls.Add(linkGithub);
             Controls.Add(btnCloseAbout);
             Controls.Add(pictureBox1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            MaximizeBox = false;
+            MaximumSize = new Size(327, 402);
+            MinimumSize = new Size(327, 402);
             Name = "FrmAbout";
+            SizeGripStyle = SizeGripStyle.Hide;
             StartPosition = FormStartPosition.CenterParent;
             Text = "A propos";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

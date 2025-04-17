@@ -12,27 +12,28 @@ namespace TriBibliv2.view
 {
     public partial class FrmAbout : Form
     {
+        /// <summary>
+        /// Initialisation de la fenêtre a propos
+        /// </summary>
         public FrmAbout()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Ouverture du lien vers la page github du projet
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void linkGithub_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            try
-            {
-                VisitLink();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Impossible d'ouvrir ce lien.");
-            }
-        }
-
-        private void VisitLink()
-        {
             linkGithub.LinkVisited = true;
-            System.Diagnostics.Process.Start("https://github.com/filkat34");
+            var psi = new System.Diagnostics.ProcessStartInfo
+            {
+                FileName = "https://github.com/filkat34/TriBibliv2",
+                UseShellExecute = true
+            };
+            System.Diagnostics.Process.Start(psi);
         }
     }
 }

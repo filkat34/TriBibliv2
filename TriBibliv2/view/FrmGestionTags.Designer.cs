@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmGestionTags));
             TxtBoxNewTag = new TextBox();
             listBoxTags = new ListBox();
             BtnAddEtiquette = new Button();
@@ -91,6 +92,7 @@
             Controls.Add(BtnAddEtiquette);
             Controls.Add(listBoxTags);
             Controls.Add(TxtBoxNewTag);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             MaximumSize = new Size(352, 548);
             MinimumSize = new Size(352, 548);
@@ -98,7 +100,6 @@
             SizeGripStyle = SizeGripStyle.Hide;
             StartPosition = FormStartPosition.CenterParent;
             Text = "Gestion des étiquettes";
-            TopMost = true;
             ResumeLayout(false);
             PerformLayout();
         }

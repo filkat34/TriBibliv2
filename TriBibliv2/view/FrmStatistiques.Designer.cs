@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmStatistiques));
             label1 = new Label();
             labelNbBooks = new Label();
             label3 = new Label();
@@ -127,6 +128,7 @@
             Controls.Add(label3);
             Controls.Add(labelNbBooks);
             Controls.Add(label1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             MaximumSize = new Size(554, 465);
             MinimumSize = new Size(554, 465);
@@ -134,7 +136,6 @@
             SizeGripStyle = SizeGripStyle.Hide;
             StartPosition = FormStartPosition.CenterParent;
             Text = "Statistiques de votre bibliothèque";
-            TopMost = true;
             ((System.ComponentModel.ISupportInitialize)dataGridViewStats).EndInit();
             ResumeLayout(false);
             PerformLayout();

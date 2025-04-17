@@ -30,6 +30,7 @@
         {
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMainWindow));
             GridVBookList = new DataGridView();
             groupBox1 = new GroupBox();
             BtnResetfilters = new Button();
@@ -47,10 +48,11 @@
             BtnDelete = new Button();
             BtnStats = new Button();
             menuStrip1 = new MenuStrip();
+            importerToolStripMenuItem = new ToolStripMenuItem();
             fichierToolStripMenuItem = new ToolStripMenuItem();
-            importerDepuisUnFichierJsonToolStripMenuItem = new ToolStripMenuItem();
             aProposToolStripMenuItem = new ToolStripMenuItem();
             quitterToolStripMenuItem = new ToolStripMenuItem();
+            aPartirDunFichierJSONToolStripMenuItem = new ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)GridVBookList).BeginInit();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
@@ -256,39 +258,46 @@
             // 
             // menuStrip1
             // 
-            menuStrip1.Items.AddRange(new ToolStripItem[] { fichierToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { importerToolStripMenuItem, fichierToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(775, 29);
             menuStrip1.TabIndex = 7;
             menuStrip1.Text = "menuStrip1";
             // 
+            // importerToolStripMenuItem
+            // 
+            importerToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { aPartirDunFichierJSONToolStripMenuItem });
+            importerToolStripMenuItem.Name = "importerToolStripMenuItem";
+            importerToolStripMenuItem.Size = new Size(83, 25);
+            importerToolStripMenuItem.Text = "Importer";
+            // 
             // fichierToolStripMenuItem
             // 
-            fichierToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { importerDepuisUnFichierJsonToolStripMenuItem, aProposToolStripMenuItem, quitterToolStripMenuItem });
+            fichierToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { aProposToolStripMenuItem, quitterToolStripMenuItem });
             fichierToolStripMenuItem.Name = "fichierToolStripMenuItem";
-            fichierToolStripMenuItem.Size = new Size(68, 25);
-            fichierToolStripMenuItem.Text = "Fichier";
-            // 
-            // importerDepuisUnFichierJsonToolStripMenuItem
-            // 
-            importerDepuisUnFichierJsonToolStripMenuItem.Name = "importerDepuisUnFichierJsonToolStripMenuItem";
-            importerDepuisUnFichierJsonToolStripMenuItem.Size = new Size(266, 26);
-            importerDepuisUnFichierJsonToolStripMenuItem.Text = "Importer une bibliothèque ";
+            fichierToolStripMenuItem.Size = new Size(85, 25);
+            fichierToolStripMenuItem.Text = "A propos";
             // 
             // aProposToolStripMenuItem
             // 
             aProposToolStripMenuItem.Name = "aProposToolStripMenuItem";
-            aProposToolStripMenuItem.Size = new Size(266, 26);
+            aProposToolStripMenuItem.Size = new Size(143, 26);
             aProposToolStripMenuItem.Text = "A propos";
             aProposToolStripMenuItem.Click += aProposToolStripMenuItem_Click;
             // 
             // quitterToolStripMenuItem
             // 
             quitterToolStripMenuItem.Name = "quitterToolStripMenuItem";
-            quitterToolStripMenuItem.Size = new Size(266, 26);
+            quitterToolStripMenuItem.Size = new Size(143, 26);
             quitterToolStripMenuItem.Text = "Quitter";
             quitterToolStripMenuItem.Click += quitterToolStripMenuItem_Click;
+            // 
+            // aPartirDunFichierJSONToolStripMenuItem
+            // 
+            aPartirDunFichierJSONToolStripMenuItem.Name = "aPartirDunFichierJSONToolStripMenuItem";
+            aPartirDunFichierJSONToolStripMenuItem.Size = new Size(257, 26);
+            aPartirDunFichierJSONToolStripMenuItem.Text = "A partir d'un fichier JSON";
             // 
             // FrmMainWindow
             // 
@@ -303,6 +312,7 @@
             Controls.Add(groupBox2);
             Controls.Add(GridVBookList);
             Controls.Add(menuStrip1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             MaximumSize = new Size(791, 829);
             MinimumSize = new Size(791, 829);
@@ -341,8 +351,9 @@
         private Button BtnResetfilters;
         private MenuStrip menuStrip1;
         private ToolStripMenuItem fichierToolStripMenuItem;
-        private ToolStripMenuItem importerDepuisUnFichierJsonToolStripMenuItem;
         private ToolStripMenuItem aProposToolStripMenuItem;
         private ToolStripMenuItem quitterToolStripMenuItem;
+        private ToolStripMenuItem importerToolStripMenuItem;
+        private ToolStripMenuItem aPartirDunFichierJSONToolStripMenuItem;
     }
 }
