@@ -1,4 +1,5 @@
 ﻿using System.Data;
+using System.Diagnostics;
 using System.Windows.Forms;
 using TriBibliv2.controller;
 using TriBibliv2.model;
@@ -342,9 +343,51 @@ namespace TriBibliv2.view
             }
         }
 
-        private void aPartirDunFichierJSONToolStripMenuItem_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Demande d'importation d'une liste de livres depuis un fichier JSON
+        /// Affiche un avertissement si la liste de livres actuelle n'est pas vide avant l'importation
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void importerToolStripMenuItem1_Click(object sender, EventArgs e)
         {
+            string filePath = "";
+            FileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "JSON files (*.json)|*.json";
+            openFileDialog.Title = "Sélectionner le fichier JSON à importer";
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                filePath = openFileDialog.FileName;
+            }
+            if (filePath != "")
+            {
+                if (listLivres.Count() > 0)
+                {
 
+                    if (MessageBox.Show("Le fichier de sauvegarde de votre bibliothèque actuelle sera écrasé. Voulez-vous vraiment importer la liste de livres depuis le fichier : " + filePath + " ? ", "Confirmation d'importation", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    {
+                        controller.ImportBooks(filePath);
+                        RemplirListeLivres();
+                        MessageBox.Show("Importation terminée !", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+                else
+                {
+                    controller.ImportBooks(filePath);
+                    RemplirListeLivres();
+                    MessageBox.Show("Importation terminée !", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+        }
+
+        /// <summary>
+        /// OUverture du dossier de sauvegarde
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ouvrirLeDossierDeSauvegardeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           controller.OpenSaveFolder();
         }
     }
 }

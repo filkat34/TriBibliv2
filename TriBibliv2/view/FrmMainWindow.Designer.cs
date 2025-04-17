@@ -48,8 +48,10 @@
             BtnDelete = new Button();
             BtnStats = new Button();
             menuStrip1 = new MenuStrip();
+            fichierToolStripMenuItem1 = new ToolStripMenuItem();
+            ouvrirLeDossierDeSauvegardeToolStripMenuItem = new ToolStripMenuItem();
             importerToolStripMenuItem = new ToolStripMenuItem();
-            aPartirDunFichierJSONToolStripMenuItem = new ToolStripMenuItem();
+            importerToolStripMenuItem1 = new ToolStripMenuItem();
             exporterToolStripMenuItem = new ToolStripMenuItem();
             fichierToolStripMenuItem = new ToolStripMenuItem();
             aProposToolStripMenuItem = new ToolStripMenuItem();
@@ -259,31 +261,45 @@
             // 
             // menuStrip1
             // 
-            menuStrip1.Items.AddRange(new ToolStripItem[] { importerToolStripMenuItem, fichierToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { fichierToolStripMenuItem1, importerToolStripMenuItem, fichierToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(775, 29);
             menuStrip1.TabIndex = 7;
             menuStrip1.Text = "menuStrip1";
             // 
+            // fichierToolStripMenuItem1
+            // 
+            fichierToolStripMenuItem1.DropDownItems.AddRange(new ToolStripItem[] { ouvrirLeDossierDeSauvegardeToolStripMenuItem });
+            fichierToolStripMenuItem1.Name = "fichierToolStripMenuItem1";
+            fichierToolStripMenuItem1.Size = new Size(68, 25);
+            fichierToolStripMenuItem1.Text = "Fichier";
+            // 
+            // ouvrirLeDossierDeSauvegardeToolStripMenuItem
+            // 
+            ouvrirLeDossierDeSauvegardeToolStripMenuItem.Name = "ouvrirLeDossierDeSauvegardeToolStripMenuItem";
+            ouvrirLeDossierDeSauvegardeToolStripMenuItem.Size = new Size(300, 26);
+            ouvrirLeDossierDeSauvegardeToolStripMenuItem.Text = "Ouvrir le dossier de sauvegarde";
+            ouvrirLeDossierDeSauvegardeToolStripMenuItem.Click += ouvrirLeDossierDeSauvegardeToolStripMenuItem_Click;
+            // 
             // importerToolStripMenuItem
             // 
-            importerToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { aPartirDunFichierJSONToolStripMenuItem, exporterToolStripMenuItem });
+            importerToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { importerToolStripMenuItem1, exporterToolStripMenuItem });
             importerToolStripMenuItem.Name = "importerToolStripMenuItem";
             importerToolStripMenuItem.Size = new Size(109, 25);
             importerToolStripMenuItem.Text = "Bibliothèque";
             // 
-            // aPartirDunFichierJSONToolStripMenuItem
+            // importerToolStripMenuItem1
             // 
-            aPartirDunFichierJSONToolStripMenuItem.Name = "aPartirDunFichierJSONToolStripMenuItem";
-            aPartirDunFichierJSONToolStripMenuItem.Size = new Size(180, 26);
-            aPartirDunFichierJSONToolStripMenuItem.Text = "Importer";
-            aPartirDunFichierJSONToolStripMenuItem.Click += aPartirDunFichierJSONToolStripMenuItem_Click;
+            importerToolStripMenuItem1.Name = "importerToolStripMenuItem1";
+            importerToolStripMenuItem1.Size = new Size(141, 26);
+            importerToolStripMenuItem1.Text = "Importer";
+            importerToolStripMenuItem1.Click += importerToolStripMenuItem1_Click;
             // 
             // exporterToolStripMenuItem
             // 
             exporterToolStripMenuItem.Name = "exporterToolStripMenuItem";
-            exporterToolStripMenuItem.Size = new Size(180, 26);
+            exporterToolStripMenuItem.Size = new Size(141, 26);
             exporterToolStripMenuItem.Text = "Exporter";
             exporterToolStripMenuItem.Click += exporterToolStripMenuItem_Click;
             // 
@@ -363,7 +379,9 @@
         private ToolStripMenuItem aProposToolStripMenuItem;
         private ToolStripMenuItem quitterToolStripMenuItem;
         private ToolStripMenuItem importerToolStripMenuItem;
-        private ToolStripMenuItem aPartirDunFichierJSONToolStripMenuItem;
         private ToolStripMenuItem exporterToolStripMenuItem;
+        private ToolStripMenuItem importerToolStripMenuItem1;
+        private ToolStripMenuItem fichierToolStripMenuItem1;
+        private ToolStripMenuItem ouvrirLeDossierDeSauvegardeToolStripMenuItem;
     }
 }

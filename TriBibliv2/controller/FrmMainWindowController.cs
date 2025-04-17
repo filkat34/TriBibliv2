@@ -65,5 +65,22 @@ namespace TriBibliv2.controller
         {
             File.Copy(nomFic, Path.Combine(pathfolder, "TriBibliexport.json"), true);
         }
+
+        /// <summary>
+        /// Importe la liste des livres depuis un fichier JSON
+        /// </summary>
+        /// <param name="pathfolder"></param>
+        public void ImportBooks(string pathfolder)
+        {
+            File.Copy(pathfolder, nomFic, true);
+        }
+
+        /// <summary>
+        /// Demande d'ouverture du dossier de sauvegarde
+        /// </summary>
+        public void OpenSaveFolder ()
+        {
+            System.Diagnostics.Process.Start("explorer.exe", dossierSauvegarde);
+        }
     }
 }
