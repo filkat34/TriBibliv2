@@ -388,7 +388,7 @@ namespace TriBibliv2.view
                 if (listLivres.Count() > 0)
                 {
 
-                    if (MessageBox.Show("Le fichier de sauvegarde de votre bibliothèque actuelle sera écrasé. Voulez-vous vraiment importer la liste de livres depuis le fichier : " + filePath + " ? ", "Confirmation d'importation", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    if (MessageBox.Show("Le fichier de sauvegarde de votre bibliothèque actuelle sera écrasé et ses données seront perdues. Voulez-vous vraiment importer la liste de livres depuis le fichier : " + filePath + " ? ", "Confirmation d'importation", MessageBoxButtons.YesNo) == DialogResult.Yes)
                     {
                         controller.ImportBooks(filePath);
                         RemplirListeLivres();
