@@ -66,6 +66,7 @@ namespace TriBibliv2.view
         private void ComboBoxFiltersMaj()
         {
             CBoxFilterStatut.Items.Clear();
+            CBoxFilterStatut.Items.Add(" "); // Ajout d'un élément vide pour permettre de réinitialiser le filtre
             foreach (Book livre in listLivres)
             {
                 if (!CBoxFilterStatut.Items.Contains(livre.Statut))
@@ -75,6 +76,7 @@ namespace TriBibliv2.view
             }
 
             CBoxFilterNote.Items.Clear();
+            CBoxFilterNote.Items.Add(" "); // Ajout d'un élément vide pour permettre de réinitialiser le filtre
             foreach (Book livre in listLivres)
             {
                 if (!CBoxFilterNote.Items.Contains(livre.Note))
@@ -84,6 +86,7 @@ namespace TriBibliv2.view
             }
 
             CBoxFilterGenre.Items.Clear();
+            CBoxFilterGenre.Items.Add(" "); // Ajout d'un élément vide pour permettre de réinitialiser le filtre
             foreach (Book livre in listLivres)
             {
                 if (!CBoxFilterGenre.Items.Contains(livre.Genre))
@@ -247,25 +250,39 @@ namespace TriBibliv2.view
 
         /// <summary>
         /// Filtre la liste des livres en fonction du genre
+        /// Permet d'annuler le filtre en sélectionnant le premier élément de la liste
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void CBoxFilterGenre_SelectedIndexChanged(object sender, EventArgs e)
         {
+
+            if (CBoxFilterGenre.SelectedIndex == 0)
+            {
+                CBoxFilterGenre.SelectedIndex = -1;
+                FilterBooks();
+            }
+
             if (CBoxFilterGenre.SelectedIndex != -1)
             {
                 FilterBooks();
             }
-
         }
 
         /// <summary>
         /// Filtre la liste des livres en fonction de la note
+        /// Permet d'annuler le filtre en sélectionnant le premier élément de la liste
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void CBoxFilterNote_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (CBoxFilterNote.SelectedIndex == 0)
+            {
+                CBoxFilterNote.SelectedIndex = -1;
+                FilterBooks();
+            }
+
             if (CBoxFilterNote.SelectedIndex != -1)
             {
                 FilterBooks();
@@ -274,11 +291,18 @@ namespace TriBibliv2.view
 
         /// <summary>
         /// Filtre la liste des livres en fonction du statut
+        /// Permet d'annuler le filtre en sélectionnant le premier élément de la liste
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void CBoxFilterStatut_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (CBoxFilterStatut.SelectedIndex == 0)
+            {
+                CBoxFilterStatut.SelectedIndex = -1;
+                FilterBooks();
+            }
+
             if (CBoxFilterStatut.SelectedIndex != -1)
             {
                 FilterBooks();
