@@ -142,7 +142,7 @@ namespace TriBibliv2.view
                 TxtBoxObservations.Text);
 
 
-                if (MessageBox.Show("Voulez-vous apporter des modifications au livre suivant : " + livreamodifier.Titre.ToUpper() + " de " + livreamodifier.NomAuteur + " ?", "Confirmation de modification", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                if (MessageBox.Show("Voulez-vous enregistrer les modifications apportées au livre : " + livreamodifier.Titre.ToUpper() + " de " + livreamodifier.NomAuteur + " ?", "Confirmation de modification", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
                     controller.ModifyBook(livreamodifier, modifiedbook, listLivres, nomFic);
                     DialogResult = DialogResult.Yes;

@@ -388,7 +388,7 @@
             groupBox1.Size = new Size(608, 103);
             groupBox1.TabIndex = 10;
             groupBox1.TabStop = false;
-            groupBox1.Text = "Filtres rapides";
+            groupBox1.Text = "Filtres";
             // 
             // FrmMainWindow
             // 
