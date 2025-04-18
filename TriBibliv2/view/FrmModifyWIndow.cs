@@ -43,6 +43,11 @@ namespace TriBibliv2.view
         private List<string> comboboxNotelist = new List<string>();
 
         /// <summary>
+        /// Variable pour gérer la nouvelle étiquette
+        /// </summary>
+        string nouvelleEtiquette = string.Empty;
+
+        /// <summary>
         /// Initialisation de la fenêtre de modification
         /// </summary>
         /// <param name="unlivre"></param>
@@ -111,9 +116,10 @@ namespace TriBibliv2.view
         {
             if (!txtBAuthorName.Text.Equals("") && !txtBoxTitle.Text.Equals("") && !(CBoxGenre.SelectedIndex == -1) && !(CBoxStatut.SelectedIndex == -1))
             {
-                if (CBoxNote.Text.Equals(""))
+                if (CBoxNote.SelectedIndex == -1)
                 {
-                    CBoxNote.Text = " ";
+                    CBoxNote.Items.Add("Non noté");
+                    CBoxNote.SelectedItem = "Non noté"; //Choix par défaut pour note
                 }
 
                 if (txtBoxAuthorSurname.Text.Equals(""))
@@ -160,22 +166,42 @@ namespace TriBibliv2.view
                 {
                     items.Add(item);
                 }
+                items.RemoveAt(0); //Supprime le premier element vide de la liste des filtres qui sert à annuler le filtre
+                nouvelleEtiquette = gestionTags.GetNouvelleEtiquette();
             }
         }
 
+        /// <summary>
+        /// Demande d'ajout d'une nouvelle étiquette de genre
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnModGenreTag_Click(object sender, EventArgs e)
         {
             MajAdminTags("Nouveau genre :", comboboxGenrelist, CBoxGenre.Items);
+            CBoxGenre.SelectedItem = nouvelleEtiquette; //selectionne l'étiquette qui vient d'être ajoutée
         }
 
+        /// <summary>
+        /// Demande d'ajout d'une nouvelle étiquette de statut
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnModStatutTag_Click(object sender, EventArgs e)
         {
             MajAdminTags("Nouveau statut :", comboboxStatutlist, CBoxStatut.Items);
+            CBoxStatut.SelectedItem = nouvelleEtiquette; //selectionne l'étiquette qui vient d'être ajoutée
         }
 
+        /// <summary>
+        /// Demande d'ajout d'une nouvelle étiquette de note
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnModTagNote_Click(object sender, EventArgs e)
         {
             MajAdminTags("Nouvelle note :", comboboxNotelist, CBoxNote.Items);
+            CBoxNote.SelectedItem = nouvelleEtiquette; // selectionne l'étiquette qui vient d'être ajoutée
         }
     }
 }

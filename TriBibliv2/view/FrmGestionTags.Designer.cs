@@ -30,8 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmGestionTags));
             TxtBoxNewTag = new TextBox();
-            listBoxTags = new ListBox();
-            BtnAddEtiquette = new Button();
             tagLabel = new Label();
             BtnSaveTag = new Button();
             SuspendLayout();
@@ -42,26 +40,6 @@
             TxtBoxNewTag.Name = "TxtBoxNewTag";
             TxtBoxNewTag.Size = new Size(305, 29);
             TxtBoxNewTag.TabIndex = 0;
-            // 
-            // listBoxTags
-            // 
-            listBoxTags.FormattingEnabled = true;
-            listBoxTags.ItemHeight = 21;
-            listBoxTags.Location = new Point(12, 137);
-            listBoxTags.Name = "listBoxTags";
-            listBoxTags.Size = new Size(305, 319);
-            listBoxTags.Sorted = true;
-            listBoxTags.TabIndex = 1;
-            // 
-            // BtnAddEtiquette
-            // 
-            BtnAddEtiquette.Location = new Point(113, 88);
-            BtnAddEtiquette.Name = "BtnAddEtiquette";
-            BtnAddEtiquette.Size = new Size(99, 28);
-            BtnAddEtiquette.TabIndex = 2;
-            BtnAddEtiquette.Text = "Ajouter";
-            BtnAddEtiquette.UseVisualStyleBackColor = true;
-            BtnAddEtiquette.Click += BtnAddEtiquette_Click;
             // 
             // tagLabel
             // 
@@ -74,7 +52,7 @@
             // 
             // BtnSaveTag
             // 
-            BtnSaveTag.Location = new Point(113, 462);
+            BtnSaveTag.Location = new Point(108, 98);
             BtnSaveTag.Name = "BtnSaveTag";
             BtnSaveTag.Size = new Size(99, 32);
             BtnSaveTag.TabIndex = 5;
@@ -86,16 +64,14 @@
             // 
             AutoScaleDimensions = new SizeF(9F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(336, 508);
+            ClientSize = new Size(329, 142);
             Controls.Add(BtnSaveTag);
             Controls.Add(tagLabel);
-            Controls.Add(BtnAddEtiquette);
-            Controls.Add(listBoxTags);
             Controls.Add(TxtBoxNewTag);
             Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
-            MaximumSize = new Size(352, 548);
-            MinimumSize = new Size(352, 548);
+            MaximumSize = new Size(345, 182);
+            MinimumSize = new Size(345, 182);
             Name = "FrmGestionTags";
             SizeGripStyle = SizeGripStyle.Hide;
             StartPosition = FormStartPosition.CenterParent;
@@ -107,8 +83,6 @@
         #endregion
 
         private TextBox TxtBoxNewTag;
-        private ListBox listBoxTags;
-        private Button BtnAddEtiquette;
         private Label tagLabel;
         private Button BtnSaveTag;
     }

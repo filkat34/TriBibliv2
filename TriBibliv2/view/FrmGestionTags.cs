@@ -8,11 +8,6 @@
         private List<string> taglist = new List<string>();
 
         /// <summary>
-        /// BindingSource pour gérer la liste des étiquettes
-        /// </summary>
-        private BindingSource bdglistBoxTags = new BindingSource();
-
-        /// <summary>
         /// Initialisation de la fenêtre de gestion des étiquettes
         /// </summary>
         /// <param name="tagName"></param>
@@ -22,20 +17,6 @@
             InitializeComponent();
             tagLabel.Text = tagName;
             taglist = Comboboxlist;
-            bdglistBoxTags.DataSource = taglist;
-            listBoxTags.DataSource = bdglistBoxTags;
-        }
-
-        /// <summary>
-        /// Demande d'ajout d'une nouvelle étiquette
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void BtnAddEtiquette_Click(object sender, EventArgs e)
-        {
-            taglist.Add(TxtBoxNewTag.Text);
-            bdglistBoxTags.ResetBindings(false);
-            TxtBoxNewTag.Clear();
         }
 
         /// <summary>
@@ -47,6 +28,11 @@
             return taglist;
         }
 
+        public string GetNouvelleEtiquette()
+        {
+            return TxtBoxNewTag.Text;
+        }
+
         /// <summary>
         /// Demande d'enregistrement des changements concernants les étiquettes
         /// </summary>
@@ -54,6 +40,12 @@
         /// <param name="e"></param>
         private void BtnSaveTag_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(TxtBoxNewTag.Text))
+            {
+                MessageBox.Show("Veuillez entrer une étiquette valide.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            taglist.Add(TxtBoxNewTag.Text);
             this.DialogResult = DialogResult.OK;
             this.Close();
         }
