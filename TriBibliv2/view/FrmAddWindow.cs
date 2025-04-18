@@ -63,14 +63,19 @@ namespace TriBibliv2.view
             {
                 CBoxStatut.Items.Add(item);
             }
+            CBoxStatut.Items.RemoveAt(0); //Supprime le premier element vide de la liste des filtres qui sert à annuler le filtre
+
             foreach (string item in comboboxGenrelist)
             {
                 CBoxGenre.Items.Add(item);
             }
+            CBoxGenre.Items.RemoveAt(0); //Supprime le premier element vide de la liste des filtres qui sert à annuler le filtre
+
             foreach (string item in comboboxNotelist)
             {
                 CBoxNote.Items.Add(item);
             }
+            CBoxNote.Items.RemoveAt(0); //Supprime le premier element vide de la liste des filtres qui sert à annuler le filtre
         }
 
         /// <summary>
@@ -83,14 +88,15 @@ namespace TriBibliv2.view
         {
             if (!txtBAuthorName.Text.Equals("") && !txtBoxTitle.Text.Equals("") && !(CBoxGenre.SelectedIndex == -1) && !(CBoxStatut.SelectedIndex == -1))
             {
-                if (CBoxNote.Text.Equals(""))
+                if (CBoxNote.SelectedIndex == -1)
                 {
-                    CBoxNote.Text = " ";
+                    CBoxNote.Items.Add("Non noté");
+                    CBoxNote.SelectedItem ="Non noté"; //Choix par défaut pour note
                 }
 
                 if (txtBoxAuthorSurname.Text.Equals(""))
                 {
-                    txtBoxAuthorSurname.Text = " ";
+                    txtBoxAuthorSurname.Text = "ddd ";
                 }
 
                 if (TxtBoxObservations.Text.Equals(""))
@@ -123,7 +129,29 @@ namespace TriBibliv2.view
             }
             else
             {
-                MessageBox.Show("Tous les champs doivent être remplis.", "Information");
+                string champarempir = "";
+
+                if (txtBAuthorName.Text.Equals(""))
+                {
+                    champarempir += $"{Environment.NewLine} - Nom ";
+                }
+
+                if (txtBoxTitle.Text.Equals(""))
+                {
+                    champarempir += $"{Environment.NewLine} - Titre";
+                }
+
+                if (CBoxGenre.SelectedIndex == -1)
+                {
+                    champarempir += $"{Environment.NewLine} - Genre";
+                }
+
+                if (CBoxStatut.SelectedIndex == -1)
+                {
+                    champarempir += $"{Environment.NewLine} - Statut";
+                }
+
+                MessageBox.Show($"Les informations suivantes doivent obligatoirement être renseignées avant d'enregistrer le livre :{Environment.NewLine}" + champarempir, "Information");
             }
         }
 

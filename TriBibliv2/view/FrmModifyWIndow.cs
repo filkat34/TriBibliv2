@@ -87,14 +87,19 @@ namespace TriBibliv2.view
             {
                 CBoxStatut.Items.Add(item);
             }
+            CBoxStatut.Items.RemoveAt(0); //Supprime le premier element vide de la liste des filtres qui sert à annuler le filtre
+
             foreach (string item in comboboxGenrelist)
             {
                 CBoxGenre.Items.Add(item);
             }
+            CBoxGenre.Items.RemoveAt(0); //Supprime le premier element vide de la liste des filtres qui sert à annuler le filtre
+
             foreach (string item in comboboxNotelist)
             {
                 CBoxNote.Items.Add(item);
             }
+            CBoxNote.Items.RemoveAt(0); //Supprime le premier element vide de la liste des filtres qui sert à annuler le filtre
         }
 
         /// <summary>
@@ -129,6 +134,7 @@ namespace TriBibliv2.view
                 CBoxStatut.SelectedItem.ToString(),
                 CBoxNote.Text.ToString(),
                 TxtBoxObservations.Text);
+
 
                 if (MessageBox.Show("Voulez-vous apporter des modifications au livre suivant : " + livreamodifier.Titre.ToUpper() + " de " + livreamodifier.NomAuteur + " ?", "Confirmation de modification", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
