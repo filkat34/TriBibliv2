@@ -7,7 +7,7 @@ using TriBibliv2.model;
 namespace TriBibliv2.view
 {
     /// <summary>
-    /// Classe de la fenêtre principale
+    /// Fenêtre principale
     /// </summary>
     public partial class FrmMainWindow : Form
     {

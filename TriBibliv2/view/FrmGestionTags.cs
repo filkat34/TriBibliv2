@@ -1,7 +1,7 @@
 ﻿namespace TriBibliv2.view
 {
     /// <summary>
-    /// Classe de la fenêtre de gestion des étiquettes
+    /// Fenêtre de gestion des étiquettes
     /// </summary>
     public partial class FrmGestionTags : Form
     {

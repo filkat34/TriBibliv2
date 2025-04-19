@@ -11,7 +11,7 @@ using System.Windows.Forms;
 namespace TriBibliv2.view
 {
     /// <summary>
-    /// Classe de la fenêtre a propos
+    /// Fenêtre a propos
     /// </summary>
     public partial class FrmAbout : Form
     {
