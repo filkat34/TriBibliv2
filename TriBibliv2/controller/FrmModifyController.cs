@@ -3,6 +3,9 @@ using TriBibliv2.model;
 
 namespace TriBibliv2.controller
 {
+    /// <summary>
+    /// Contrôleur de la fenêtre de modification
+    /// </summary>
     public class FrmModifyController
     {
         /// <summary>

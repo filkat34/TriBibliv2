@@ -3,6 +3,9 @@ using TriBibliv2.model;
 
 namespace TriBibliv2.controller
 {
+    /// <summary>
+    /// Contrôleur de la fenêtre d'ajout
+    /// </summary>
     public class FrmAddWindowController
     {
         /// <summary>

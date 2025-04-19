@@ -4,6 +4,9 @@ using TriBibliv2.model;
 
 namespace TriBibliv2.view
 {
+    /// <summary>
+    /// Classe de la fenêtre de modification
+    /// </summary>
     public partial class FrmModifyWindow : Form
     {
 

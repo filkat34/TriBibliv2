@@ -5,6 +5,9 @@ using static TriBibliv2.controller.Serialize;
 
 namespace TriBibliv2.controller
 {
+    /// <summary>
+    /// Contrôleur de la fenêtre principale
+    /// </summary>
     public class FrmMainWindowController
     { 
         /// <summary>

@@ -10,6 +10,9 @@ using System.Windows.Forms;
 
 namespace TriBibliv2.view
 {
+    /// <summary>
+    /// CLasse de la fenêtre a propos
+    /// </summary>
     public partial class FrmAbout : Form
     {
         /// <summary>

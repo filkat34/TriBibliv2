@@ -11,6 +11,9 @@ using TriBibliv2.model;
 
 namespace TriBibliv2.view
 {
+    /// <summary>
+    /// Classe de la fenêtre de statistiques
+    /// </summary>
     public partial class FrmStatistiques : Form
     {
         /// <summary>
