@@ -1,0 +1,452 @@
+[
+  {
+    "Titre": "Le Piano oriental",
+    "NomAuteur": "Abirached",
+    "PrenomAuteur": "Zeina",
+    "Genre": "BD",
+    "Statut": "Conserver",
+    "Note": "*****",
+    "Observation": "R\u00E9flexion sur l\u0027identit\u00E9 culturelle"
+  },
+  {
+    "Titre": "Le Grand Meaulnes",
+    "NomAuteur": "Alain-Fournier",
+    "PrenomAuteur": "Henri Alban",
+    "Genre": "Roman",
+    "Statut": "Conserver",
+    "Note": "****",
+    "Observation": "Aventure et myst\u00E8re"
+  },
+  {
+    "Titre": "Le P\u00E8re Goriot",
+    "NomAuteur": "Balzac",
+    "PrenomAuteur": "Honor\u00E9 de",
+    "Genre": "Roman",
+    "Statut": "Conserver",
+    "Note": "**",
+    "Observation": "R\u00E9alisme"
+  },
+  {
+    "Titre": "Les Fleurs du mal",
+    "NomAuteur": "Baudelaire",
+    "PrenomAuteur": "Charles",
+    "Genre": "Po\u00E9sie",
+    "Statut": "Conserver",
+    "Note": "****",
+    "Observation": "Spleen et id\u00E9al"
+  },
+  {
+    "Titre": "Le Ma\u00EEtre et Marguerite",
+    "NomAuteur": "Boulgakov",
+    "PrenomAuteur": "Mikha\u00EFl",
+    "Genre": "Roman",
+    "Statut": "Donner",
+    "Note": "*****",
+    "Observation": "Fantastique"
+  },
+  {
+    "Titre": "Le D\u00E9sert des Tartares",
+    "NomAuteur": "Buzzati",
+    "PrenomAuteur": "Dino",
+    "Genre": "Roman",
+    "Statut": "Conserver",
+    "Note": "*****",
+    "Observation": "Existentialisme"
+  },
+  {
+    "Titre": "L\u0027\u00C9tranger",
+    "NomAuteur": "Camus",
+    "PrenomAuteur": "Albert",
+    "Genre": "Roman",
+    "Statut": "Conserver",
+    "Note": "****",
+    "Observation": "Existentialisme"
+  },
+  {
+    "Titre": "La Peste",
+    "NomAuteur": "Camus",
+    "PrenomAuteur": "Albert",
+    "Genre": "Roman",
+    "Statut": "Conserver",
+    "Note": "*****",
+    "Observation": "Absurde"
+  },
+  {
+    "Titre": "L\u0027Alchimiste",
+    "NomAuteur": "Coelho",
+    "PrenomAuteur": "Paulo",
+    "Genre": "Roman",
+    "Statut": "Vendre",
+    "Note": "*",
+    "Observation": "Qu\u00EAte personnelle"
+  },
+  {
+    "Titre": "Le Comte de Monte-Cristo",
+    "NomAuteur": "Dumas",
+    "PrenomAuteur": "Alexandre",
+    "Genre": "Aventure",
+    "Statut": "Conserver",
+    "Note": "*****",
+    "Observation": "Vengeance et trahison"
+  },
+  {
+    "Titre": "Les Trois Mousquetaires",
+    "NomAuteur": "Dumas",
+    "PrenomAuteur": "Alexandre",
+    "Genre": "Aventure",
+    "Statut": "Conserver",
+    "Note": "*****",
+    "Observation": "Cape et \u00E9p\u00E9e"
+  },
+  {
+    "Titre": "L\u0027Amant",
+    "NomAuteur": "Duras",
+    "PrenomAuteur": "Marguerite",
+    "Genre": "Roman",
+    "Statut": "Conserver",
+    "Note": "***",
+    "Observation": "Autobiographique"
+  },
+  {
+    "Titre": "Le Quatuor d\u0027Alexandrie",
+    "NomAuteur": "Durrell",
+    "PrenomAuteur": "Lawrence",
+    "Genre": "Roman",
+    "Statut": "Recycler",
+    "Note": "*",
+    "Observation": "Livr\u00E9 tr\u00E8s ab\u00EEm\u00E9. Pages manquantes."
+  },
+  {
+    "Titre": "Le Nom de la rose",
+    "NomAuteur": "Eco",
+    "PrenomAuteur": "Umberto",
+    "Genre": "Roman policier",
+    "Statut": "Conserver",
+    "Note": "***",
+    "Observation": "Enqu\u00EAte m\u00E9di\u00E9vale"
+  },
+  {
+    "Titre": "L\u0027\u00C9trange Histoire de Benjamin Button",
+    "NomAuteur": "Fitzgerald",
+    "PrenomAuteur": "F. Scott",
+    "Genre": "Nouvelle",
+    "Statut": "Conserver",
+    "Note": "*",
+    "Observation": "Vie \u00E0 l\u0027envers"
+  },
+  {
+    "Titre": "Madame Bovary",
+    "NomAuteur": "Flaubert",
+    "PrenomAuteur": "Gustave",
+    "Genre": "Roman",
+    "Statut": "Conserver",
+    "Note": "*****",
+    "Observation": "R\u00E9alisme"
+  },
+  {
+    "Titre": "L\u0027\u00C9ducation sentimentale",
+    "NomAuteur": "Flaubert",
+    "PrenomAuteur": "Gustave",
+    "Genre": "Roman",
+    "Statut": "Conserver",
+    "Note": "*****",
+    "Observation": "R\u00E9alisme"
+  },
+  {
+    "Titre": "Le Tambour",
+    "NomAuteur": "Grass",
+    "PrenomAuteur": "G\u00FCnter",
+    "Genre": "Roman",
+    "Statut": "Conserver",
+    "Note": "*****",
+    "Observation": "Historique"
+  },
+  {
+    "Titre": "Le Vieil Homme et la Mer",
+    "NomAuteur": "Hemingway",
+    "PrenomAuteur": "Ernest",
+    "Genre": "Nouvelle",
+    "Statut": "Conserver",
+    "Note": "***",
+    "Observation": "Combat et pers\u00E9v\u00E9rance"
+  },
+  {
+    "Titre": "L\u0027Iliade",
+    "NomAuteur": "Hom\u00E8re",
+    "PrenomAuteur": "",
+    "Genre": "\u00C9pop\u00E9e",
+    "Statut": "Conserver",
+    "Note": "*****",
+    "Observation": "Mythologie grecque"
+  },
+  {
+    "Titre": "L\u0027Odyss\u00E9e",
+    "NomAuteur": "Hom\u00E8re",
+    "PrenomAuteur": "",
+    "Genre": "\u00C9pop\u00E9e",
+    "Statut": "Conserver",
+    "Note": "*****",
+    "Observation": "Mythologie grecque"
+  },
+  {
+    "Titre": "Les Mis\u00E9rables",
+    "NomAuteur": "Hugo",
+    "PrenomAuteur": "Victor",
+    "Genre": "Roman",
+    "Statut": "Conserver",
+    "Note": "*****",
+    "Observation": "Classique incontournable"
+  },
+  {
+    "Titre": "L\u0027Homme qui rit",
+    "NomAuteur": "Hugo",
+    "PrenomAuteur": "Victor",
+    "Genre": "Roman",
+    "Statut": "Conserver",
+    "Note": "*****",
+    "Observation": "Drame historique"
+  },
+  {
+    "Titre": "Le Meilleur des mondes",
+    "NomAuteur": "Huxley",
+    "PrenomAuteur": "Aldous",
+    "Genre": "Science-fiction",
+    "Statut": "Conserver",
+    "Note": "*****",
+    "Observation": "Dystopie"
+  },
+  {
+    "Titre": "Le Proc\u00E8s",
+    "NomAuteur": "Kafka",
+    "PrenomAuteur": "Franz",
+    "Genre": "Roman",
+    "Statut": "Conserver",
+    "Note": "***",
+    "Observation": "Absurde"
+  },
+  {
+    "Titre": "Le Ch\u00E2teau",
+    "NomAuteur": "Kafka",
+    "PrenomAuteur": "Franz",
+    "Genre": "Roman",
+    "Statut": "Conserver",
+    "Note": "***",
+    "Observation": "Absurde"
+  },
+  {
+    "Titre": "L\u0027Insoutenable L\u00E9g\u00E8ret\u00E9 de l\u0027\u00EAtre",
+    "NomAuteur": "Kundera",
+    "PrenomAuteur": "Milan",
+    "Genre": "Roman",
+    "Statut": "Conserver",
+    "Note": "*****",
+    "Observation": "Philosophique"
+  },
+  {
+    "Titre": "Les Liaisons dangereuses",
+    "NomAuteur": "Laclos",
+    "PrenomAuteur": "Pierre Choderlos de",
+    "Genre": "Roman \u00E9pistolaire",
+    "Statut": "Vendre",
+    "Note": "***",
+    "Observation": "Intrigues et manipulations"
+  },
+  {
+    "Titre": "Le Gu\u00E9pard",
+    "NomAuteur": "Lampedusa",
+    "PrenomAuteur": "Giuseppe Tomasi di",
+    "Genre": "Roman",
+    "Statut": "Conserver",
+    "Note": "*****",
+    "Observation": "Historique"
+  },
+  {
+    "Titre": "L\u0027Amant de Lady Chatterley",
+    "NomAuteur": "Lawrence",
+    "PrenomAuteur": "D.H.",
+    "Genre": "Roman",
+    "Statut": "Conserver",
+    "Note": "***",
+    "Observation": "Romance et scandale"
+  },
+  {
+    "Titre": "L\u0027Appel de la for\u00EAt",
+    "NomAuteur": "London",
+    "PrenomAuteur": "Jack",
+    "Genre": "Aventure",
+    "Statut": "Conserver",
+    "Note": "*****",
+    "Observation": "Nature et survie"
+  },
+  {
+    "Titre": "Bel-Ami",
+    "NomAuteur": "Maupassant",
+    "PrenomAuteur": "Guy de",
+    "Genre": "Roman",
+    "Statut": "Conserver",
+    "Note": "****",
+    "Observation": "Ascension sociale"
+  },
+  {
+    "Titre": "Le Horla",
+    "NomAuteur": "Maupassant",
+    "PrenomAuteur": "Guy de",
+    "Genre": "Nouvelle",
+    "Statut": "Conserver",
+    "Note": "****",
+    "Observation": "Fantastique"
+  },
+  {
+    "Titre": "1984",
+    "NomAuteur": "Orwell",
+    "PrenomAuteur": "George",
+    "Genre": "Science-fiction",
+    "Statut": "Conserver",
+    "Note": "*****",
+    "Observation": "Dystopie embl\u00E9matique"
+  },
+  {
+    "Titre": "Le Docteur Jivago",
+    "NomAuteur": "Pasternak",
+    "PrenomAuteur": "Boris",
+    "Genre": "Roman",
+    "Statut": "Conserver",
+    "Note": "*****",
+    "Observation": "Historique"
+  },
+  {
+    "Titre": "Le Diable au corps",
+    "NomAuteur": "Radiguet",
+    "PrenomAuteur": "Raymond",
+    "Genre": "Roman",
+    "Statut": "Conserver",
+    "Note": "*****",
+    "Observation": "Amour interdit"
+  },
+  {
+    "Titre": "Le Petit Prince",
+    "NomAuteur": "Saint-Exup\u00E9ry",
+    "PrenomAuteur": "Antoine de",
+    "Genre": "Conte",
+    "Statut": "Donner",
+    "Note": "***",
+    "Observation": "Philosophique"
+  },
+  {
+    "Titre": "L\u0027Attrape-c\u0153urs",
+    "NomAuteur": "Salinger",
+    "PrenomAuteur": "J.D.",
+    "Genre": "Roman",
+    "Statut": "Conserver",
+    "Note": "*****",
+    "Observation": "Adolescence et r\u00E9volte"
+  },
+  {
+    "Titre": "Le Rouge et le Noir",
+    "NomAuteur": "Stendhal",
+    "PrenomAuteur": "Henri Beyle",
+    "Genre": "Roman",
+    "Statut": "Conserver",
+    "Note": "*****",
+    "Observation": "Ambition et soci\u00E9t\u00E9"
+  },
+  {
+    "Titre": "L\u0027\u00CEle au tr\u00E9sor",
+    "NomAuteur": "Stevenson",
+    "PrenomAuteur": "Robert Louis",
+    "Genre": "Aventure",
+    "Statut": "Conserver",
+    "Note": "*****",
+    "Observation": "Pirates et tr\u00E9sor"
+  },
+  {
+    "Titre": "L\u0027\u00C9trange Cas du docteur Jekyll et de M. Hyde",
+    "NomAuteur": "Stevenson",
+    "PrenomAuteur": "Robert Louis",
+    "Genre": "Roman",
+    "Statut": "Conserver",
+    "Note": "****",
+    "Observation": "Double personnalit\u00E9"
+  },
+  {
+    "Titre": "Le Parfum",
+    "NomAuteur": "S\u00FCskind",
+    "PrenomAuteur": "Patrick",
+    "Genre": "Roman",
+    "Statut": "Conserver",
+    "Note": "*****",
+    "Observation": "Historique"
+  },
+  {
+    "Titre": "Le Silence de la mer",
+    "NomAuteur": "Vercors",
+    "PrenomAuteur": "Jean Bruller",
+    "Genre": "Nouvelle",
+    "Statut": "Conserver",
+    "Note": "*****",
+    "Observation": "R\u00E9sistance"
+  },
+  {
+    "Titre": "Le Tour du monde en 80 jours",
+    "NomAuteur": "Verne",
+    "PrenomAuteur": "Jules",
+    "Genre": "Aventure",
+    "Statut": "Conserver",
+    "Note": "*****",
+    "Observation": "Voyage autour du monde"
+  },
+  {
+    "Titre": "L\u0027\u00C9cume des jours",
+    "NomAuteur": "Vian",
+    "PrenomAuteur": "Boris",
+    "Genre": "Roman",
+    "Statut": "Vendre",
+    "Note": "*",
+    "Observation": "Surr\u00E9aliste"
+  },
+  {
+    "Titre": "L\u0027Homme invisible",
+    "NomAuteur": "Wells",
+    "PrenomAuteur": "H.G.",
+    "Genre": "Science-fiction",
+    "Statut": "Conserver",
+    "Note": "*****",
+    "Observation": "Invisibilit\u00E9"
+  },
+  {
+    "Titre": "Le Portrait de Dorian Gray",
+    "NomAuteur": "Wilde",
+    "PrenomAuteur": "Oscar",
+    "Genre": "Roman",
+    "Statut": "Conserver",
+    "Note": "*****",
+    "Observation": "Esth\u00E9tisme"
+  },
+  {
+    "Titre": "L\u0027Ombre du vent",
+    "NomAuteur": "Zaf\u00F3n",
+    "PrenomAuteur": "Carlos Ruiz",
+    "Genre": "Roman",
+    "Statut": "Donner",
+    "Note": "***",
+    "Observation": "Myst\u00E8re et litt\u00E9rature"
+  },
+  {
+    "Titre": "Germinal",
+    "NomAuteur": "Zola",
+    "PrenomAuteur": "\u00C9mile",
+    "Genre": "Roman",
+    "Statut": "Conserver",
+    "Note": "*****",
+    "Observation": "R\u00E9alisme social"
+  },
+  {
+    "Titre": "L\u0027Assommoir",
+    "NomAuteur": "Zola",
+    "PrenomAuteur": "\u00C9mile",
+    "Genre": "Roman",
+    "Statut": "Conserver",
+    "Note": "*****",
+    "Observation": "R\u00E9alisme social"
+  }
+]
