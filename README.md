@@ -22,10 +22,10 @@ Ce programme vous permet de :
 
 Vous pouvez télécharger :
 * la documentation technique au format pdf [ici](https://github.com/filkat34/TriBibliv2/blob/89bd0c1f3368d8f5336e76f9c0865db1e27d2ed9/Documentation/Technique.pdf) ;
-* la documentation utilisateur au format pdf également [ici](https://github.com/filkat34/TriBibliv2/blob/89bd0c1f3368d8f5336e76f9c0865db1e27d2ed9/Documentation/Utilisateur.pdf "download").
+* la documentation utilisateur au format pdf également [ici](https://github.com/filkat34/TriBibliv2/blob/89bd0c1f3368d8f5336e76f9c0865db1e27d2ed9/Documentation/Utilisateur.pdf).
 
 ## Installation 
 
 L'application peut être installée en téléchargeant et en exécutant le fichier msi disponible [ici](https://github.com/filkat34/TriBibliv2/raw/refs/heads/master/Install/Debug/InstallTriBibli.msi).
 
-Pour l'essayer vous pouvez télécherger puis importer la bibliothèque test générée aléatoirement contenue dans ce fichier [JSON](https://github.com/filkat34/TriBibliv2/raw/refs/heads/master/Install/Debug/bibliothequetest.json).
+Pour l'essayer vous pouvez télécherger puis importer la bibliothèque test générée aléatoirement contenue dans ce fichier [JSON](https://github.com/filkat34/TriBibliv2/raw/refs/heads/master/Install/Debug/bibliothequetest.json "dowload").
