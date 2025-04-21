@@ -27,3 +27,5 @@ Vous pouvez télécharger :
 ## Installation 
 
 L'application peut être installée en téléchargeant et en exécutant le fichier msi disponible [ici](https://github.com/filkat34/TriBibliv2/raw/refs/heads/master/Install/Debug/InstallTriBibli.msi).
+
+Pour l'essayer vous pouvez télécherger puis importer la bibliothèque test générée aléatoirement contenue dans ce fichier [JSON](https://github.com/filkat34/TriBibliv2/raw/refs/heads/master/Install/Debug/bibliothequetest.json).
